@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_first_layout"
+            android:icon="@mipmap/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_second_layout"
+            android:icon="@mipmap/ic_folder_black_24dp"
+            android:title="Content Course" />
+        <item
+            android:id="@+id/nav_third_layout"
+            android:icon="@mipmap/ic_group_black_24dp"
+            android:title="About Us" />
+        <item
+            android:id="@+id/nav_team_sea"
+            android:icon="@mipmap/ic_group_black_24dp"
+            android:title="About Team SEA" />
+
+    </group>
+    <item android:title="Call Us">
+        <menu>
+            <item
+                android:id="@+id/nav_share1"
+                android:icon="@mipmap/ic_phone_in_talk_black_24dp"
+                android:title="01111111111" />
+            <item
+                android:id="@+id/nav_share22"
+                android:icon="@mipmap/ic_phone_in_talk_black_24dp"
+                android:title="01222222222" />
+            <item
+                android:id="@+id/nav_share32"
+                android:icon="@mipmap/ic_phone_in_talk_black_24dp"
+                android:title="01333333333" />
+
+        </menu>
+    </item>
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@mipmap/facebook"
+                android:title="Facebook" />
+            <item
+                android:id="@+id/nav_share2"
+                android:icon="@mipmap/twitter"
+                android:title="Twitter" />
+            <item
+                android:id="@+id/nav_share3"
+                android:icon="@mipmap/ic_subscriptions_black_24dp"
+                android:title="YouTube" />
+
+        </menu>
+    </item>
+
+</menu>
