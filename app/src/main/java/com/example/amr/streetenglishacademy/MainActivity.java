@@ -43,8 +43,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-//        FragmentManager fragmentManager = getFragmentManager();
-//        fragmentManager.beginTransaction().replace(R.id.content_frame, new FirstFragment()).commit();
     }
 
     @Override
@@ -107,8 +105,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentManager.beginTransaction().replace(R.id.content_frame, new ThirdFragment()).commit();
         } else if (id == R.id.nav_team_sea) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new AboutTeamFragment()).commit();
-//            Intent i = new Intent(MainActivity.this, Team_SEA.class);
-//            startActivity(i);
         } else if (id == R.id.nav_share1) {
             String num = "01111111111";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num, null)));
