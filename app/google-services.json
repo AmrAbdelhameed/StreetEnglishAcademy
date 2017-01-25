@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "222719549719",
+    "firebase_url": "https://street-english-academy.firebaseio.com",
+    "project_id": "street-english-academy",
+    "storage_bucket": "street-english-academy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222719549719:android:39ec16e2fa085769",
+        "android_client_info": {
+          "package_name": "com.example.amr.streetenglishacademy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222719549719-lmsm2mlb7gnh2ortdbq525lkt828ns17.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyZiEXrD5tk0zh3edPYDsBsSs3MXCwP-o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

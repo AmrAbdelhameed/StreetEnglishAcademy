@@ -71,6 +71,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(i);
             return true;
         }
+        if (id == R.id.action_reviews)
+        {
+            Intent i = new Intent(MainActivity.this, Evaluation.class);
+            startActivity(i);
+        }
         if (id == R.id.action_logout) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage(R.string.finish_program)
