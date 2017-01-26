@@ -70,10 +70,9 @@
                 android:layout_alignEnd="@+id/textView3"
                 android:layout_alignRight="@+id/textView3"
                 android:layout_gravity="center_horizontal|bottom"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/amr4"
-                android:onClick="run"
-                android:text="Save Contact"
+                android:text="Done"
                 android:textAllCaps="false"
                 android:textColor="#ffffff" />
 
