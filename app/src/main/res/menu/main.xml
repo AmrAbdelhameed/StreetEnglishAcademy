@@ -4,23 +4,23 @@
 
     <item
         android:id="@+id/action_settings"
+        android:icon="@mipmap/iconsetting"
         android:title=""
         android:visible="true"
-        android:icon="@mipmap/iconsetting"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/action_reviews"
+        android:icon="@mipmap/reviews"
         android:title=""
         android:visible="true"
-        android:icon="@mipmap/reviews"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/action_logout"
+        android:icon="@mipmap/close"
         android:title=""
         android:visible="true"
-        android:icon="@mipmap/close"
         app:showAsAction="always" />
 </menu>
 
