@@ -1,5 +1,6 @@
 package com.example.amr.streetenglishacademy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -93,10 +94,13 @@ public class Evaluation extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Please Try Again ... ", Toast.LENGTH_SHORT).show();
         } else {
             createUser(nname, npositive, nnegative);
-            Toast.makeText(getApplicationContext(), "Done", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Thanks for your Opinion", Toast.LENGTH_SHORT).show();
             name.setText("");
             positive.setText("");
             negative.setText("");
+            Intent i = new Intent(Evaluation.this, MainActivity.class);
+            startActivity(i);
+            finish();
         }
     }
 

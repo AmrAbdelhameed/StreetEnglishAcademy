@@ -2,11 +2,10 @@ package com.example.amr.streetenglishacademy;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -77,11 +76,13 @@ public class Login extends AppCompatActivity {
     public void btnRegister(View v) {
         Intent i = new Intent(Login.this, RegistrationActivity.class);
         startActivity(i);
+        finish();
     }
 
     public void btnForget(View v) {
         Intent i = new Intent(Login.this, ForgetPassword.class);
         startActivity(i);
+        finish();
     }
 
     @Override
