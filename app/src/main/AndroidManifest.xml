@@ -34,10 +34,12 @@
             android:name=".ImageUser"
             android:label=""
             android:theme="@style/Base.Theme.AppCompat.Light.Dialog">
+
         </activity>
         <activity
             android:name=".Evaluation"
             android:label="Evaluate for Us">
+
         </activity>
     </application>
 

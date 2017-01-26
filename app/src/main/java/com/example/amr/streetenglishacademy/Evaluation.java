@@ -29,6 +29,7 @@ public class Evaluation extends AppCompatActivity {
         btn_send_msg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Toast.makeText(Evaluation.this, Name.getText().toString() + positive.getText().toString() + negative.getText().toString(), Toast.LENGTH_SHORT).show();
             }
         });

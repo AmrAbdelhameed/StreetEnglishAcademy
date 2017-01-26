@@ -9,7 +9,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.amr.streetenglishacademy.Evaluation">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -39,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:text="Positive Opinion"
+                android:text="Positive"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <EditText
@@ -54,7 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:text="Negative Opinion"
+                android:text="Negative"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <EditText
@@ -73,7 +72,8 @@
                 android:layout_gravity="center_horizontal|bottom"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/amr4"
-                android:text="Done"
+                android:onClick="run"
+                android:text="Save Contact"
                 android:textAllCaps="false"
                 android:textColor="#ffffff" />
 
