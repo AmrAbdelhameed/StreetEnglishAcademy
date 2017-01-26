@@ -73,7 +73,6 @@
                 android:layout_gravity="center_horizontal|bottom"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/amr4"
-                android:onClick="run"
                 android:text="Done"
                 android:textAllCaps="false"
                 android:textColor="#ffffff" />
