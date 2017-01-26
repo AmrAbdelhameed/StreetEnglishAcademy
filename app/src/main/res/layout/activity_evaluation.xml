@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0EDED"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.amr.streetenglishacademy.Evaluation">
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:text="Name"
+                android:text="Please Enter Your Name"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <EditText
@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:text="Positive"
+                android:text="Please Enter Your Positive Opinion"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <EditText
@@ -53,7 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:text="Negative"
+                android:text="Please Enter Your Negative Opinion"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <EditText
@@ -64,7 +64,7 @@
                 android:inputType="textPersonName" />
 
             <Button
-                android:id="@+id/btn_send"
+                android:id="@+id/button1"
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_alignEnd="@+id/textView3"
@@ -72,6 +72,7 @@
                 android:layout_gravity="center_horizontal|bottom"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/amr4"
+                android:onClick="run"
                 android:text="Done"
                 android:textAllCaps="false"
                 android:textColor="#ffffff" />

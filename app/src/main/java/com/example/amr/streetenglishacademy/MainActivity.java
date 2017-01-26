@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         if (id == R.id.action_reviews)
         {
-            Intent i = new Intent(MainActivity.this, Evaluation.class);
+            Intent i = new Intent(MainActivity.this, Login.class);
             startActivity(i);
         }
         if (id == R.id.action_logout) {
