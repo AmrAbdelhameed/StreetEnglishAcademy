@@ -84,12 +84,6 @@ public class Login extends AppCompatActivity {
         startActivity(i);
     }
 
-    public boolean onKeyDown(int keycode, KeyEvent event) {
-        if (keycode == KeyEvent.KEYCODE_BACK) {
-            moveTaskToBack(true);
-        }
-        return super.onKeyDown(keycode, event);
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;
