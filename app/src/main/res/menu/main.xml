@@ -13,14 +13,14 @@
         android:id="@+id/action_reviews"
         android:title=""
         android:visible="true"
-        android:icon="@drawable/reviews"
+        android:icon="@mipmap/reviews"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/action_logout"
         android:title=""
         android:visible="true"
-        android:icon="@drawable/logout"
+        android:icon="@mipmap/close"
         app:showAsAction="always" />
 </menu>
 
