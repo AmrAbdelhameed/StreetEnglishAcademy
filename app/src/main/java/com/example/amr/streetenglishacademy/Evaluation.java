@@ -90,17 +90,33 @@ public class Evaluation extends AppCompatActivity {
         String npositive = positive.getText().toString();
         String nnegative = negative.getText().toString();
 
-        if (name.getText().toString().isEmpty() || positive.getText().toString().isEmpty() || negative.getText().toString().isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Please Try Again ... ", Toast.LENGTH_SHORT).show();
+        if ((name.getText().toString().isEmpty() && positive.getText().toString().isEmpty())
+                || (name.getText().toString().isEmpty() && negative.getText().toString().isEmpty())
+                || (positive.getText().toString().isEmpty() && negative.getText().toString().isEmpty())) {
+            Toast.makeText(getApplicationContext(), "Please try again ... ", Toast.LENGTH_SHORT).show();
+        } else if (name.getText().toString().isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Please enter your name ... ", Toast.LENGTH_SHORT).show();
+        } else if (positive.getText().toString().isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Please enter your positive opinion ... ", Toast.LENGTH_SHORT).show();
+        } else if (negative.getText().toString().isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Please enter your negative opinion ... ", Toast.LENGTH_SHORT).show();
         } else {
-            createUser(nname, npositive, nnegative);
-            Toast.makeText(getApplicationContext(), "Thanks for your Opinion", Toast.LENGTH_SHORT).show();
-            name.setText("");
-            positive.setText("");
-            negative.setText("");
-            Intent i = new Intent(Evaluation.this, MainActivity.class);
-            startActivity(i);
-            finish();
+            if (nname.equalsIgnoreCase("sea") && npositive.equalsIgnoreCase("sea") && nnegative.equalsIgnoreCase("sea")) {
+                Intent i = new Intent(Evaluation.this, ShowAllReviews.class);
+                startActivity(i);
+                name.setText("");
+                positive.setText("");
+                negative.setText("");
+            } else {
+                createUser(nname, npositive, nnegative);
+                Toast.makeText(getApplicationContext(), "Thanks for your Opinion", Toast.LENGTH_SHORT).show();
+                name.setText("");
+                positive.setText("");
+                negative.setText("");
+                Intent i = new Intent(Evaluation.this, MainActivity.class);
+                startActivity(i);
+                finish();
+            }
         }
     }
 
