@@ -25,12 +25,12 @@ public class SecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         myView = inflater.inflate(R.layout.second_layout, container, false);
 
-        lvProduct = (ListView)myView.findViewById(R.id.listview_product2);
+        lvProduct = (ListView) myView.findViewById(R.id.listview_product2);
 
         mCItemList = new ArrayList<>();
         //Add sample data for list
         //We can get data from DB, webservice here
-        mCItemList.add(new Content_Item(1, "Conversation","116 items"));
+        mCItemList.add(new Content_Item(1, "Conversation", "116 items"));
         mCItemList.add(new Content_Item(2, "Idioms", "40 items"));
         mCItemList.add(new Content_Item(3, "Phrasal Verbs", "30 items"));
         mCItemList.add(new Content_Item(4, "Videos", "60 items"));
@@ -45,7 +45,7 @@ public class SecondFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Toast.makeText(getActivity(), mCItemList.get(position).getNamecontent()+" and id = "+view.getTag().toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), mCItemList.get(position).getNamecontent() + " and id = " + view.getTag().toString(), Toast.LENGTH_SHORT).show();
             }
         });
 

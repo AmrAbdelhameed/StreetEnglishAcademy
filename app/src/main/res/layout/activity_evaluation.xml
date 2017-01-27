@@ -9,6 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.amr.streetenglishacademy.Evaluation">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -19,11 +20,12 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textname"
+                android:id="@+id/text1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:text="Please Enter Your Name"
+                android:layout_marginTop="4dp"
+                android:text="Please Enter Your Name *"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <EditText
@@ -34,11 +36,11 @@
                 android:inputType="textPersonName" />
 
             <TextView
-                android:id="@+id/textemail"
+                android:id="@+id/text2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:text="Please Enter Your Positive Opinion"
+                android:text="Please Enter Your Positive Opinion *"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <EditText
@@ -49,11 +51,11 @@
                 android:inputType="textPersonName" />
 
             <TextView
-                android:id="@+id/textPhone"
+                android:id="@+id/text3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:text="Please Enter Your Negative Opinion"
+                android:text="Please Enter Your Negative Opinion *"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <EditText

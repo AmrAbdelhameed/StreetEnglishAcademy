@@ -25,15 +25,15 @@
             <item
                 android:id="@+id/nav_share1"
                 android:icon="@mipmap/ic_phone_in_talk_black_24dp"
-                android:title="01111111111" />
+                android:title="01063593802" />
             <item
                 android:id="@+id/nav_share22"
                 android:icon="@mipmap/ic_phone_in_talk_black_24dp"
-                android:title="01222222222" />
+                android:title="01027715566" />
             <item
                 android:id="@+id/nav_share32"
                 android:icon="@mipmap/ic_phone_in_talk_black_24dp"
-                android:title="01333333333" />
+                android:title="01001785123" />
 
         </menu>
     </item>

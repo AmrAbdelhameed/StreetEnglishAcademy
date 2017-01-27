@@ -15,23 +15,24 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Welcome"
-            android:layout_marginBottom="30dp"
-            android:textSize="50dp"
             android:id="@+id/textView3"
-            android:layout_gravity="center" />
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:text="Welcome"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Street English Academy"
-            android:textSize="25dp"
+            android:textSize="50dp" />
+
+        <TextView
             android:id="@+id/textView4"
-            android:layout_gravity="center" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Street English Academy"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="25dp" />
 
     </FrameLayout>
 </RelativeLayout>

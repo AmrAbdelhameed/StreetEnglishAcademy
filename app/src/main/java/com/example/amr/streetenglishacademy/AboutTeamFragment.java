@@ -28,12 +28,12 @@ public class AboutTeamFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.about_team_layout, container, false);
 
-        lvProduct = (ListView)view.findViewById(R.id.listview_product);
+        lvProduct = (ListView) view.findViewById(R.id.listview_product);
 
         mTeamItemList = new ArrayList<>();
         //Add sample data for list
         //We can get data from DB, webservice here
-        mTeamItemList.add(new Team_Item(1, "Amr","01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
+        mTeamItemList.add(new Team_Item(1, "Amr", "01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
         mTeamItemList.add(new Team_Item(2, "Ahmed", "01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
         mTeamItemList.add(new Team_Item(3, "Sayed", "01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
         mTeamItemList.add(new Team_Item(4, "Ibrahim", "01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));

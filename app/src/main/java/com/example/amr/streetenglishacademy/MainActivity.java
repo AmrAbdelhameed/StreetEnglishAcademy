@@ -71,8 +71,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(i);
             return true;
         }
-        if (id == R.id.action_reviews)
-        {
+        if (id == R.id.action_reviews) {
             Intent i = new Intent(MainActivity.this, Login.class);
             startActivity(i);
         }
@@ -111,13 +110,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_team_sea) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new AboutTeamFragment()).commit();
         } else if (id == R.id.nav_share1) {
-            String num = "01111111111";
+            String num = "01063593802";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num, null)));
         } else if (id == R.id.nav_share22) {
-            String num2 = "01222222222";
+            String num2 = "01027715566";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num2, null)));
         } else if (id == R.id.nav_share32) {
-            String num3 = "01333333333";
+            String num3 = "01001785123";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num3, null)));
         } else if (id == R.id.nav_share) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/")));

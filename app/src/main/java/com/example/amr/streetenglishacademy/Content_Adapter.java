@@ -41,11 +41,11 @@ public class Content_Adapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = View.inflate(mContext, R.layout.item_content, null);
-        TextView tvName = (TextView)v.findViewById(R.id.tv_namecontent);
-        TextView tvPrice = (TextView)v.findViewById(R.id.tv_no_of_items);
+        TextView tvName = (TextView) v.findViewById(R.id.tv_namecontent);
+        TextView tvPrice = (TextView) v.findViewById(R.id.tv_no_of_items);
         //Set text for TextView
-        tvName.setText(""+ mCItemList.get(position).getNamecontent());
-        tvPrice.setText(""+ mCItemList.get(position).getN_of_items());
+        tvName.setText("" + mCItemList.get(position).getNamecontent());
+        tvPrice.setText("" + mCItemList.get(position).getN_of_items());
 
         //Save product id to tag
         v.setTag(mCItemList.get(position).get_Id());
