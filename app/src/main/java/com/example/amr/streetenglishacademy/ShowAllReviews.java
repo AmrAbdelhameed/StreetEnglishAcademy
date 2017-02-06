@@ -1,15 +1,17 @@
 package com.example.amr.streetenglishacademy;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,11 +22,16 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class ShowAllReviews extends AppCompatActivity {
+    private static final String TAG = MainActivity.class.getSimpleName();
     private String room_name;
     ArrayAdapter<String> adapter;
     private DatabaseReference root;
     ListView lv;
     ArrayList<String> array_negative, array_positive, array_Name;
+    private FirebaseAuth firebaseAuth;
+    private FirebaseUser user;
+    private String userId;
+    private int size_arraylist = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +40,11 @@ public class ShowAllReviews extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         room_name = "Vote";
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        user = firebaseAuth.getCurrentUser();
+        userId = user.getUid();
+
         lv = (ListView) findViewById(R.id.listView1);
 
         array_negative = new ArrayList<>();
@@ -48,6 +60,7 @@ public class ShowAllReviews extends AppCompatActivity {
                 append_chat_conversation(dataSnapshot);
                 adapter = new ArrayAdapter<String>(ShowAllReviews.this, android.R.layout.simple_list_item_1, array_Name);
                 lv.setAdapter(adapter);
+                size_arraylist = array_Name.size();
             }
 
             @Override
@@ -76,7 +89,15 @@ public class ShowAllReviews extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 
-                Toast.makeText(ShowAllReviews.this, "Positive Opinion : " + array_positive.get(arg2) + " , Negative Opinion : " + array_negative.get(arg2), Toast.LENGTH_SHORT).show();
+                Bundle dataBundle = new Bundle();
+                dataBundle.putString("name_user", array_Name.get(arg2));
+                dataBundle.putString("positive_user", array_positive.get(arg2));
+                dataBundle.putString("negative_user", array_negative.get(arg2));
+                Intent intent = new Intent(ShowAllReviews.this, DetailsReview.class);
+                intent.putExtras(dataBundle);
+                startActivity(intent);
+
+                //Toast.makeText(ShowAllReviews.this, "Positive Opinion : " + array_positive.get(arg2) + " , Negative Opinion : " + array_negative.get(arg2), Toast.LENGTH_SHORT).show();
 
             }
         });

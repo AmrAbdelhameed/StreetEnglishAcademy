@@ -2,6 +2,7 @@ package com.example.amr.streetenglishacademy;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -59,6 +60,15 @@ public class AboutTeamFragment extends Fragment {
                 i.putExtras(b);
                 startActivity(i);
                 //Toast.makeText(getApplicationContext(), mTeamItemList.get(position).getName()+" and id = "+view.getTag().toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        lvProduct.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+            public boolean onItemLongClick(AdapterView<?> arg0, View v, int index, long arg3) {
+
+                startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", mTeamItemList.get(index).getPrice(), null)));
+
+                return true;
             }
         });
 
