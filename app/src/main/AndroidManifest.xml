@@ -3,6 +3,8 @@
     package="com.example.amr.streetenglishacademy">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -35,14 +37,8 @@
             android:label=""
             android:theme="@style/Base.Theme.AppCompat.Light.Dialog" />
         <activity
-            android:name=".ForgetPassword"
-            android:label="Reset Password" />
-        <activity
             android:name=".Evaluation"
             android:label="Evaluate For Us" />
-        <activity
-            android:name=".RegistrationActivity"
-            android:label="Register Now" />
         <activity
             android:name=".Login"
             android:label="Login Now" />

@@ -1,88 +1,68 @@
 package com.example.amr.streetenglishacademy;
 
-import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-
 public class Login extends AppCompatActivity {
     private EditText txtEmailLogin;
-    private EditText txtPwd;
-    private FirebaseAuth firebaseAuth;
+    private boolean loggedIn = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        firebaseAuth = FirebaseAuth.getInstance();
+        setContentView(R.layout.activity_login);
 
-        if (firebaseAuth.getCurrentUser() != null) {
-            startActivity(new Intent(Login.this, Evaluation.class));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        txtEmailLogin = (EditText) findViewById(R.id.txtEmailLogin);
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //In onresume fetching value from sharedpreference
+        SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+
+        //Fetching the boolean value form sharedpreferences
+        loggedIn = sharedPreferences.getBoolean(Config.LOGGEDIN_SHARED_PREF, false);
+
+        //If we will get true
+        if (loggedIn) {
+            //We will start the Profile Activity
+            Intent intent = new Intent(Login.this, Evaluation.class);
+            startActivity(intent);
             finish();
         }
-        setContentView(R.layout.activity_login);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        txtEmailLogin = (EditText) findViewById(R.id.txtEmailLogin);
-        txtPwd = (EditText) findViewById(R.id.txtPasswordLogin);
-        firebaseAuth = FirebaseAuth.getInstance();
-
     }
 
     public void btnUserLogin_Click(View v) {
 
-        final String email = txtEmailLogin.getText().toString();
-
-        if (txtEmailLogin.getText().toString().isEmpty() && txtPwd.getText().toString().isEmpty()) {
-            Toast.makeText(Login.this, "Forget Enter Your Email and Password", Toast.LENGTH_SHORT).show();
-        } else if (txtEmailLogin.getText().toString().isEmpty()) {
-            Toast.makeText(Login.this, "Forget Enter Your Email", Toast.LENGTH_SHORT).show();
-        } else if (txtPwd.getText().toString().isEmpty()) {
-            Toast.makeText(Login.this, "Forget Enter Your Password", Toast.LENGTH_SHORT).show();
+        if (txtEmailLogin.getText().toString().isEmpty()) {
+            Toast.makeText(Login.this, "Please Enter Your Name", Toast.LENGTH_SHORT).show();
         } else {
-            final ProgressDialog progressDialog = ProgressDialog.show(Login.this, "Please wait...", "Proccessing...", true);
+            SharedPreferences sharedPreferences = Login.this.getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
-            (firebaseAuth.signInWithEmailAndPassword(txtEmailLogin.getText().toString(), txtPwd.getText().toString()))
-                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            progressDialog.dismiss();
+            SharedPreferences.Editor editor = sharedPreferences.edit();
 
-                            if (task.isSuccessful()) {
-                                Toast.makeText(Login.this, "Login successful", Toast.LENGTH_LONG).show();
-                                Intent i = new Intent(Login.this, Evaluation.class);
-                                i.putExtra("Email", firebaseAuth.getCurrentUser().getEmail());
-                                startActivity(i);
-                                finish();
-                            } else {
-                                Log.e("ERROR", task.getException().toString());
-                                Toast.makeText(Login.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
-                            }
-                        }
-                    });
+            editor.putBoolean(Config.LOGGEDIN_SHARED_PREF, true);
+            editor.putString(Config.EMAIL_SHARED_PREF, txtEmailLogin.getText().toString());
+
+            editor.commit();
+
+            Intent i = new Intent(Login.this, Evaluation.class);
+            startActivity(i);
+            finish();
         }
-    }
 
-    public void btnRegister(View v) {
-        Intent i = new Intent(Login.this, RegistrationActivity.class);
-        startActivity(i);
-        finish();
-    }
-
-    public void btnForget(View v) {
-        Intent i = new Intent(Login.this, ForgetPassword.class);
-        startActivity(i);
-        finish();
     }
 
     @Override

@@ -10,8 +10,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,10 +26,6 @@ public class ShowAllReviews extends AppCompatActivity {
     private DatabaseReference root;
     ListView lv;
     ArrayList<String> array_negative, array_positive, array_Name;
-    private FirebaseAuth firebaseAuth;
-    private FirebaseUser user;
-    private String userId;
-    private int size_arraylist = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +34,6 @@ public class ShowAllReviews extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         room_name = "Vote";
-
-        firebaseAuth = FirebaseAuth.getInstance();
-        user = firebaseAuth.getCurrentUser();
-        userId = user.getUid();
 
         lv = (ListView) findViewById(R.id.listView1);
 
@@ -60,7 +50,6 @@ public class ShowAllReviews extends AppCompatActivity {
                 append_chat_conversation(dataSnapshot);
                 adapter = new ArrayAdapter<String>(ShowAllReviews.this, android.R.layout.simple_list_item_1, array_Name);
                 lv.setAdapter(adapter);
-                size_arraylist = array_Name.size();
             }
 
             @Override
