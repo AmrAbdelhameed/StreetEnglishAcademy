@@ -45,9 +45,9 @@ public class Team_Adapter extends BaseAdapter {
         TextView tvPrice = (TextView) v.findViewById(R.id.tv_price);
         TextView tvDescription = (TextView) v.findViewById(R.id.tv_description);
         //Set text for TextView
-        tvName.setText("" + mTeamItemList.get(position).getName());
-        tvPrice.setText("" + mTeamItemList.get(position).getPrice());
-        tvDescription.setText("" + mTeamItemList.get(position).getDescription());
+        tvName.setText("Name : " + mTeamItemList.get(position).getName());
+        tvPrice.setText("Position : " + mTeamItemList.get(position).getPrice());
+        tvDescription.setText("About " + mTeamItemList.get(position).getName() + " : " + mTeamItemList.get(position).getDescription());
 
         //Save product id to tag
         v.setTag(mTeamItemList.get(position).getId());

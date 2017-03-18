@@ -45,6 +45,9 @@ public class SecondFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+//                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com.eg/?gfe_rd=cr&ei=IS3LV_ChKbOs8weBg6C4Dw#q=zip+code+"+plac));
+//                startActivity(i);
+
                 Toast.makeText(getActivity(), mCItemList.get(position).getNamecontent() + " and id = " + view.getTag().toString(), Toast.LENGTH_SHORT).show();
             }
         });

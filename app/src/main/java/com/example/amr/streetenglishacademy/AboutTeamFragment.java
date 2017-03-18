@@ -2,7 +2,6 @@ package com.example.amr.streetenglishacademy;
 
 import android.app.Fragment;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -34,17 +33,17 @@ public class AboutTeamFragment extends Fragment {
         mTeamItemList = new ArrayList<>();
         //Add sample data for list
         //We can get data from DB, webservice here
-        mTeamItemList.add(new Team_Item(1, "Amr", "01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-        mTeamItemList.add(new Team_Item(2, "Ahmed", "01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-        mTeamItemList.add(new Team_Item(3, "Sayed", "01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-        mTeamItemList.add(new Team_Item(4, "Ibrahim", "01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-        mTeamItemList.add(new Team_Item(5, "Dalia", "01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-        mTeamItemList.add(new Team_Item(6, "Heba", "01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-        mTeamItemList.add(new Team_Item(7, "Moahmmed", "01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-        mTeamItemList.add(new Team_Item(8, "Ziad", "01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-        mTeamItemList.add(new Team_Item(9, "Gehan", "01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-        mTeamItemList.add(new Team_Item(10, "Mariam", "01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-        mTeamItemList.add(new Team_Item(11, "Karim", "01063593802", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
+        mTeamItemList.add(new Team_Item(1, "Ismail", "Senior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
+        mTeamItemList.add(new Team_Item(2, "Ahmed", "Junior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
+        mTeamItemList.add(new Team_Item(3, "Mohammed", "Senior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
+        mTeamItemList.add(new Team_Item(4, "Sara", "Junior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
+        mTeamItemList.add(new Team_Item(5, "Karim", "Senior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
+//        mTeamItemList.add(new Team_Item(6, "Heba", "Junior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
+//        mTeamItemList.add(new Team_Item(7, "Moahmmed", "Senior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
+//        mTeamItemList.add(new Team_Item(8, "Ziad", "Junior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
+//        mTeamItemList.add(new Team_Item(9, "Gehan", "Senior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
+//        mTeamItemList.add(new Team_Item(10, "Mariam", "Junior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
+//        mTeamItemList.add(new Team_Item(11, "Karim", "Senior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
 
         //Init adapter
         adapter = new Team_Adapter(getActivity(), mTeamItemList);
@@ -62,15 +61,15 @@ public class AboutTeamFragment extends Fragment {
                 //Toast.makeText(getApplicationContext(), mTeamItemList.get(position).getName()+" and id = "+view.getTag().toString(), Toast.LENGTH_SHORT).show();
             }
         });
-        lvProduct.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-
-            public boolean onItemLongClick(AdapterView<?> arg0, View v, int index, long arg3) {
-
-                startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", mTeamItemList.get(index).getPrice(), null)));
-
-                return true;
-            }
-        });
+//        lvProduct.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//
+//            public boolean onItemLongClick(AdapterView<?> arg0, View v, int index, long arg3) {
+//
+//                startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", mTeamItemList.get(index).getPrice(), null)));
+//
+//                return true;
+//            }
+//        });
 
         return view;
     }
