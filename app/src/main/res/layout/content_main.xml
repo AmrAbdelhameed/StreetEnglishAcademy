@@ -14,20 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="80dp"
-            android:background="@mipmap/iconn" />
-
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="90dp"
+            android:layout_marginBottom="30dp"
             android:text="Welcome"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="50dp" />
@@ -37,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="130dp"
+            android:layout_marginTop="30dp"
             android:text="Street English Academy"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="25dp" />
