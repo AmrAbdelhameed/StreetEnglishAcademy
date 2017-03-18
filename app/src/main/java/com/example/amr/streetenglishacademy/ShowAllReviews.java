@@ -25,7 +25,7 @@ public class ShowAllReviews extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     private DatabaseReference root;
     ListView lv;
-    ArrayList<String> array_negative, array_positive, array_Name;
+    ArrayList<String> array_positive, array_Name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,6 @@ public class ShowAllReviews extends AppCompatActivity {
 
         lv = (ListView) findViewById(R.id.listView1);
 
-        array_negative = new ArrayList<>();
         array_positive = new ArrayList<>();
         array_Name = new ArrayList<>();
 
@@ -81,7 +80,6 @@ public class ShowAllReviews extends AppCompatActivity {
                 Bundle dataBundle = new Bundle();
                 dataBundle.putString("name_user", array_Name.get(arg2));
                 dataBundle.putString("positive_user", array_positive.get(arg2));
-                dataBundle.putString("negative_user", array_negative.get(arg2));
                 Intent intent = new Intent(ShowAllReviews.this, DetailsReview.class);
                 intent.putExtras(dataBundle);
                 startActivity(intent);
@@ -92,17 +90,15 @@ public class ShowAllReviews extends AppCompatActivity {
         });
     }
 
-    private String negati, namee, positiv;
+    private String namee, positiv;
 
     private void append_chat_conversation(DataSnapshot dataSnapshot) {
 
         Iterator i = dataSnapshot.getChildren().iterator();
 
         while (i.hasNext()) {
-            negati = (String) ((DataSnapshot) i.next()).getValue();
-            array_Name.add(negati);
             namee = (String) ((DataSnapshot) i.next()).getValue();
-            array_negative.add(namee);
+            array_Name.add(namee);
             positiv = (String) ((DataSnapshot) i.next()).getValue();
             array_positive.add(positiv);
 

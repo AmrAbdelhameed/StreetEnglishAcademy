@@ -7,7 +7,6 @@ public class Contact {
 
     String name;
     String positive;
-    String negative;
 
     public Contact() {
     }
@@ -20,15 +19,11 @@ public class Contact {
         return positive;
     }
 
-    public String getNegative() {
-        return negative;
-    }
 
 
-    public Contact(String name, String positive, String negative) {
+    public Contact(String name, String positive) {
         this.name = name;
         this.positive = positive;
-        this.negative = negative;
     }
 
 }

@@ -23,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Evaluation extends AppCompatActivity {
     private static final String TAG = Login.class.getSimpleName();
-    TextView negative, positive;
+    TextView positive;
     private String userId;
     private DatabaseReference mFirebaseDatabase;
     private FirebaseDatabase mFirebaseInstance;
@@ -42,18 +42,17 @@ public class Evaluation extends AppCompatActivity {
 
         mFirebaseDatabase = mFirebaseInstance.getReference("Vote");
 
-        negative = (TextView) findViewById(R.id.editTextPhone);
         positive = (TextView) findViewById(R.id.editTextEmail);
 
     }
 
-    private void createUser(String name, String positive, String negative) {
+    private void createUser(String name, String positive) {
 
         if (TextUtils.isEmpty(userId)) {
             userId = u;
         }
 
-        Contact contact = new Contact(name, positive, negative);
+        Contact contact = new Contact(name, positive);
 
         mFirebaseDatabase.child(userId).setValue(contact);
 
@@ -72,7 +71,7 @@ public class Evaluation extends AppCompatActivity {
                     Log.e(TAG, "Contact data is null!");
                     return;
                 }
-                Log.e(TAG, "Contact data is changed!" + contact.name + ", " + contact.positive + ", " + contact.negative);
+                Log.e(TAG, "Contact data is changed!" + contact.name + ", " + contact.positive);
 
             }
 
@@ -88,26 +87,18 @@ public class Evaluation extends AppCompatActivity {
 
         String nname = u;
         String npositive = positive.getText().toString();
-        String nnegative = negative.getText().toString();
-
-        if (positive.getText().toString().isEmpty() && negative.getText().toString().isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Please Enter your positive and negative opinion ... ", Toast.LENGTH_SHORT).show();
-        } else if (positive.getText().toString().isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Please Enter your positive opinion ... ", Toast.LENGTH_SHORT).show();
-        } else if (negative.getText().toString().isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Please Enter your negative opinion ... ", Toast.LENGTH_SHORT).show();
-        } else {
+if (positive.getText().toString().isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Please Enter your opinion ... ", Toast.LENGTH_SHORT).show();
+        }  else {
             if (isNetworkAvailable()) {
-                if (npositive.equalsIgnoreCase("sea") && nnegative.equalsIgnoreCase("sea")) {
+                if (npositive.equalsIgnoreCase("sea")) {
                     Intent i = new Intent(Evaluation.this, ShowAllReviews.class);
                     startActivity(i);
                     positive.setText("");
-                    negative.setText("");
                 } else {
-                    createUser(nname, npositive, nnegative);
+                    createUser(nname, npositive);
                     Toast.makeText(getApplicationContext(), "Thanks for your Opinion", Toast.LENGTH_SHORT).show();
                     positive.setText("");
-                    negative.setText("");
                     Intent i = new Intent(Evaluation.this, MainActivity.class);
                     startActivity(i);
                     finish();
