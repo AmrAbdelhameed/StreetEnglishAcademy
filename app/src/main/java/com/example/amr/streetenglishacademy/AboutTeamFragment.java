@@ -33,17 +33,12 @@ public class AboutTeamFragment extends Fragment {
         mTeamItemList = new ArrayList<>();
         //Add sample data for list
         //We can get data from DB, webservice here
-        mTeamItemList.add(new Team_Item(1, "Ismail", "Senior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-        mTeamItemList.add(new Team_Item(2, "Ahmed", "Junior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-        mTeamItemList.add(new Team_Item(3, "Mohammed", "Senior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-        mTeamItemList.add(new Team_Item(4, "Sara", "Junior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-        mTeamItemList.add(new Team_Item(5, "Karim", "Senior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-//        mTeamItemList.add(new Team_Item(6, "Heba", "Junior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-//        mTeamItemList.add(new Team_Item(7, "Moahmmed", "Senior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-//        mTeamItemList.add(new Team_Item(8, "Ziad", "Junior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-//        mTeamItemList.add(new Team_Item(9, "Gehan", "Senior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-//        mTeamItemList.add(new Team_Item(10, "Mariam", "Junior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
-//        mTeamItemList.add(new Team_Item(11, "Karim", "Senior", "kalaaaaaaaaaaaaaaaaaaaam Ktiiiiir"));
+        mTeamItemList.add(new Team_Item(1, "Ahmed Sharaf", "President and Co-Founder", "kalaaaaaaaaaaaaaaaaaaaaaaaaaaam"));
+        mTeamItemList.add(new Team_Item(2, "Ismail Arafa", "President and Co-Founder", ""));
+        mTeamItemList.add(new Team_Item(3, "Mohammed Abdo", "Operation Manger - English Instructor", ""));
+        mTeamItemList.add(new Team_Item(4, "Doaa Mohammed", "Princess", ""));
+        mTeamItemList.add(new Team_Item(5, "Asmaa Mahmoud", "Designer", ""));
+        mTeamItemList.add(new Team_Item(6, "Amr Abdelhameed", "Android Developer", ""));
 
         //Init adapter
         adapter = new Team_Adapter(getActivity(), mTeamItemList);
@@ -52,24 +47,16 @@ public class AboutTeamFragment extends Fragment {
         lvProduct.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
                 Intent i = new Intent(getActivity(), ImageUser.class);
                 Bundle b = new Bundle();
                 b.putString("nid", view.getTag().toString());
-                b.putString("nname", mTeamItemList.get(position).getName());
+                b.putString("nname", mTeamItemList.get(position).getDescription());
                 i.putExtras(b);
                 startActivity(i);
-                //Toast.makeText(getApplicationContext(), mTeamItemList.get(position).getName()+" and id = "+view.getTag().toString(), Toast.LENGTH_SHORT).show();
+
             }
         });
-//        lvProduct.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//
-//            public boolean onItemLongClick(AdapterView<?> arg0, View v, int index, long arg3) {
-//
-//                startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", mTeamItemList.get(index).getPrice(), null)));
-//
-//                return true;
-//            }
-//        });
 
         return view;
     }

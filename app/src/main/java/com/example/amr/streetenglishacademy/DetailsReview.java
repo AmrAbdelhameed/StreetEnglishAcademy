@@ -22,8 +22,8 @@ public class DetailsReview extends AppCompatActivity {
         String name = extras.getString("name_user");
         String pos_op = extras.getString("positive_user");
 
-        setTitle(name);
-        pos.setText(pos_op);
+        setTitle("Opinion of "+name);
+        pos.setText("Opinion of "+name+" : "+pos_op);
 
     }
     @Override

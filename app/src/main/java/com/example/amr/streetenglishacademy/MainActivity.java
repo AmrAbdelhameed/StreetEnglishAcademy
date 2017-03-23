@@ -110,16 +110,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_team_sea) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new AboutTeamFragment()).commit();
         } else if (id == R.id.nav_share1) {
-            String num = "01063593802";
+            String num = "01120319547";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num, null)));
         } else if (id == R.id.nav_share22) {
-            String num2 = "01027715566";
+            String num2 = "01009396674";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num2, null)));
         } else if (id == R.id.nav_share32) {
-            String num3 = "01001785123";
+            String num3 = "01206512731";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num3, null)));
         } else if (id == R.id.nav_share) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/")));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/Street.English.Academy/?ref=bookmarks")));
         } else if (id == R.id.nav_share2) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.twitter.com/")));
         } else if (id == R.id.nav_share3) {

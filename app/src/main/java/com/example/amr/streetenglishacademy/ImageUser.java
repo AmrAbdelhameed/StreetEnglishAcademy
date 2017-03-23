@@ -19,7 +19,7 @@ public class ImageUser extends AppCompatActivity {
         String id = b.getString("nid");
         String name = b.getString("nname");
         setTitle(name);
-        if (id.equals("1") || id.equals("3") || id.equals("5") || id.equals("7") || id.equals("9") || id.equals("11")) {
+        if (id.equals("1") || id.equals("2") || id.equals("3") || id.equals("4") || id.equals("5") || id.equals("6")) {
             bt.setBackgroundResource(R.mipmap.amr);
         }
     }

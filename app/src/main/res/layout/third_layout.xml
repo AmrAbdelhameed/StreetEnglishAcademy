@@ -39,7 +39,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
-                android:text="13 st, Mohammed Refaat - El Bhoos"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
