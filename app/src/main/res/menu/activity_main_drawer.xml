@@ -48,6 +48,14 @@
                 android:icon="@mipmap/twitter"
                 android:title="Twitter" />
             <item
+                android:id="@+id/nav_insta"
+                android:icon="@mipmap/insta"
+                android:title="Instagram" />
+            <item
+                android:id="@+id/nav_gmail"
+                android:icon="@mipmap/gmail"
+                android:title="Gmail" />
+            <item
                 android:id="@+id/nav_share3"
                 android:icon="@mipmap/ic_subscriptions_black_24dp"
                 android:title="YouTube" />

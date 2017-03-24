@@ -33,12 +33,12 @@ public class AboutTeamFragment extends Fragment {
         mTeamItemList = new ArrayList<>();
         //Add sample data for list
         //We can get data from DB, webservice here
-        mTeamItemList.add(new Team_Item(1, "Ahmed Sharaf", "President and Co-Founder", "kalaaaaaaaaaaaaaaaaaaaaaaaaaaam"));
+        mTeamItemList.add(new Team_Item(1, "Ahmed Sharaf", "President and Co-Founder", "kalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaam"));
         mTeamItemList.add(new Team_Item(2, "Ismail Arafa", "President and Co-Founder", ""));
         mTeamItemList.add(new Team_Item(3, "Mohammed Abdo", "Operation Manger - English Instructor", ""));
         mTeamItemList.add(new Team_Item(4, "Doaa Mohammed", "Princess", ""));
         mTeamItemList.add(new Team_Item(5, "Asmaa Mahmoud", "Designer", ""));
-        mTeamItemList.add(new Team_Item(6, "Amr Abdelhameed", "Android Developer", ""));
+        mTeamItemList.add(new Team_Item(6, "Amr Abdelhameed", "Android Developer", "kalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaam"));
 
         //Init adapter
         adapter = new Team_Adapter(getActivity(), mTeamItemList);
@@ -51,7 +51,8 @@ public class AboutTeamFragment extends Fragment {
                 Intent i = new Intent(getActivity(), ImageUser.class);
                 Bundle b = new Bundle();
                 b.putString("nid", view.getTag().toString());
-                b.putString("nname", mTeamItemList.get(position).getDescription());
+                b.putString("nname", mTeamItemList.get(position).getName());
+                b.putString("ndes", mTeamItemList.get(position).getDescription());
                 i.putExtras(b);
                 startActivity(i);
 

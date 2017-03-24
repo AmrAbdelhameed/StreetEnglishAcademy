@@ -118,6 +118,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_share32) {
             String num3 = "01206512731";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num3, null)));
+        } else if (id == R.id.nav_insta) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/")));
+        } else if (id == R.id.nav_gmail) {
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO
+                    , Uri.fromParts("mailto", "ismailarafa999@gmail.com", null));
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "");
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "");
+            startActivity(Intent.createChooser(emailIntent, "Send email..."));
         } else if (id == R.id.nav_share) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/Street.English.Academy/?ref=bookmarks")));
         } else if (id == R.id.nav_share2) {
