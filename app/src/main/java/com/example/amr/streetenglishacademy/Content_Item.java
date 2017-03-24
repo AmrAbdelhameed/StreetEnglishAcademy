@@ -1,8 +1,5 @@
 package com.example.amr.streetenglishacademy;
 
-/**
- * Created by NgocTri on 11/15/2015.
- */
 public class Content_Item {
     private int id;
     private String namecontent;

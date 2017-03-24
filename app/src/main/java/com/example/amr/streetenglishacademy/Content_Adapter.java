@@ -8,9 +8,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by NgocTri on 11/15/2015.
- */
 public class Content_Adapter extends BaseAdapter {
 
     private Context mContext;

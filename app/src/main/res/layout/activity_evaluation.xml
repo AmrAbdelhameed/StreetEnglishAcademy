@@ -10,37 +10,64 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.amr.streetenglishacademy.Evaluation">
 
-    <TextView
-        android:id="@+id/text2"
+    <FrameLayout
+        android:id="@+id/content_frame"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Please Enter Your Opinion *"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/text2"
-        android:layout_marginTop="10dp"
-        android:inputType="textPersonName" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextEmail"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/amr4"
-        android:gravity="center"
-        android:onClick="run"
-        android:text="Done"
-        android:textAllCaps="false"
-        android:textColor="#ffffff" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="Please Enter Your Opinion *"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal|top"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/amr3"
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:hint="Enter Here"
+                    android:inputType="textPersonName"
+                    android:padding="15dp" />
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="250dp"
+                    android:layout_height="70dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal|top"
+                    android:layout_marginTop="20dp"
+                    android:background="#000000"
+                    android:onClick="run"
+                    android:text="Done"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
 
 </RelativeLayout>

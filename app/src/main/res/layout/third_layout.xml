@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
                 android:layout_marginTop="5dp"
-                android:background="@mipmap/ic_launcher"
+                android:background="@mipmap/newiconnn"
                 android:clickable="true"
                 android:scaleType="centerCrop" />
 
@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="3dp"
                 android:padding="7dp"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="3dp"
                 android:padding="7dp"
                 android:text="You could. But you shouldn't. Android's chrome is designed by UI professionals who study how a user interacts with a device"
                 android:textAppearance="?android:attr/textAppearanceMedium" />

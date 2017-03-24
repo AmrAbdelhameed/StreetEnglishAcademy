@@ -13,9 +13,6 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by user on 12/31/15.
- */
 public class AboutTeamFragment extends Fragment {
 
     View view;

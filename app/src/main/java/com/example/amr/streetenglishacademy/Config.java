@@ -1,9 +1,5 @@
 package com.example.amr.streetenglishacademy;
 
-/**
- * Created by Amr on 02/03/2017.
- */
-
 public class Config {
 
     //Keys for Sharedpreferences
