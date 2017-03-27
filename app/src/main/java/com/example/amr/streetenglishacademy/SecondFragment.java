@@ -31,12 +31,12 @@ public class SecondFragment extends Fragment {
         mCItemList = new ArrayList<>();
         //Add sample data for list
         //We can get data from DB, webservice here
-        mCItemList.add(new Content_Item(1, "Conversations", "116 items"));
-        mCItemList.add(new Content_Item(2, "Idioms", "40 items"));
-        mCItemList.add(new Content_Item(3, "Phrasal Verbs", "30 items"));
-        mCItemList.add(new Content_Item(4, "Videos", "60 items"));
-        mCItemList.add(new Content_Item(5, "Vocabulary", "25 items"));
-        mCItemList.add(new Content_Item(6, "Exercises", "80 items"));
+        mCItemList.add(new Content_Item(1, "Conversations", "Open in Drive"));
+        mCItemList.add(new Content_Item(2, "Idioms", "Open in Drive"));
+        mCItemList.add(new Content_Item(3, "Phrasal Verbs", "Open in Drive"));
+        mCItemList.add(new Content_Item(4, "Videos", "Open in Drive"));
+        mCItemList.add(new Content_Item(5, "Vocabulary", "Open in Drive"));
+        mCItemList.add(new Content_Item(6, "Exercises", "Open in Drive"));
 
         //Init adapter
         adapter = new Content_Adapter(getActivity(), mCItemList);
