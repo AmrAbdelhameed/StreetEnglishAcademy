@@ -4,6 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F0EEEE"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.amr.streetenglishacademy.MainActivity">
 
     <ScrollView
@@ -19,7 +23,6 @@
                 android:id="@+id/image_team"
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
-                android:layout_marginTop="5dp"
                 android:background="@mipmap/newiconnn"
                 android:clickable="true"
                 android:scaleType="centerCrop" />
@@ -40,6 +43,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="3dp"
                 android:padding="7dp"
+                android:text="hehehehehe"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
@@ -51,7 +55,6 @@
                 android:padding="7dp"
                 android:text="You could. But you shouldn't. Android's chrome is designed by UI professionals who study how a user interacts with a device"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
-
 
         </LinearLayout>
     </ScrollView>
