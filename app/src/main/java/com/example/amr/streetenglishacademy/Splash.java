@@ -26,7 +26,6 @@ public class Splash extends AppCompatActivity {
                     startActivity(intent);
                     Splash.this.finish();
                 }
-                //startActivity(new Intent(Intent.ACTION_DIAL , Uri.fromParts("tel",num,null)));
             }
         });
         timer.start();
@@ -35,6 +34,5 @@ public class Splash extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-//        mediaPlayer.release();
     }
 }

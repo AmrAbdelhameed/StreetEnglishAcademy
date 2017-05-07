@@ -65,22 +65,6 @@ public class AboutTeamFragment extends Fragment {
 
         lv.setAdapter(new MyListAdaper(getActivity(), R.layout.list_item, data));
 
-//        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-//                builder.setMessage(datades.get(position))
-//                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-//                            public void onClick(DialogInterface dialog, int id) {
-//                                // User cancelled the dialog
-//                            }
-//                        });
-//                AlertDialog d = builder.create();
-//                d.setTitle("About " + data.get(position));
-//                d.show();
-//            }
-//        });
-
         return view;
     }
 
@@ -112,7 +96,6 @@ public class AboutTeamFragment extends Fragment {
 
                 @Override
                 public void onClick(View v) {
-//                    Toast.makeText(getContext(), "Button was clicked for list item " + position, Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(getContext(), ImageUser.class);
                     Bundle b = new Bundle();
                     b.putString("nname", data.get(position));
