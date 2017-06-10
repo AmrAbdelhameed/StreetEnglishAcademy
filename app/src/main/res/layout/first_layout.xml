@@ -19,8 +19,7 @@
                 android:id="@+id/i1"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginTop="5dp"
-                android:background="@mipmap/newiconnn"
+                android:background="@mipmap/el2ola"
                 android:clickable="true"
                 android:scaleType="centerCrop" />
 
@@ -28,7 +27,7 @@
                 android:id="@+id/i2"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:background="@mipmap/ic_launcher"
+                android:background="@mipmap/eltania"
                 android:clickable="true"
                 android:scaleType="centerCrop" />
 
@@ -36,7 +35,7 @@
                 android:id="@+id/i3"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:background="@mipmap/newiconnn"
+                android:background="@mipmap/eltalta"
                 android:clickable="true"
                 android:scaleType="centerCrop" />
 
@@ -44,7 +43,7 @@
                 android:id="@+id/i4"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:background="@mipmap/ic_launcher"
+                android:background="@mipmap/elrab3a"
                 android:clickable="true"
                 android:scaleType="centerCrop" />
         </LinearLayout>

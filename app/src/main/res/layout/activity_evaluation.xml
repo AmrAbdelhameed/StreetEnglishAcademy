@@ -32,7 +32,7 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:padding="15dp"
-                    android:text="Please Enter Your Opinion *"
+                    android:text="Kindly, Tell us about your feedback"
                     android:textSize="20dp" />
 
                 <EditText

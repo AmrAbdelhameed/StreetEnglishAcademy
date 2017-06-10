@@ -33,11 +33,6 @@ public class AboutTeamFragment extends Fragment {
 
         ListView lv = (ListView) view.findViewById(R.id.listview_product);
 
-        data.add("Ahmed Sharaf");
-        datapos.add("President and Co-Founder");
-        datades.add("Udacity was asked to work this application of MAL | Google | Udacity and took a certificate of them");
-        datapic.add(R.mipmap.amr);
-
         data.add("Ismail Arafa");
         datapos.add("President and Co-Founder");
         datades.add("Udacity was asked to work this application of MAL | Google | Udacity and took a certificate of them");

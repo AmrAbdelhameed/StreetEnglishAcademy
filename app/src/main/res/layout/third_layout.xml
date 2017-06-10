@@ -53,7 +53,6 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="3dp"
                 android:padding="7dp"
-                android:text="You could. But you shouldn't. Android's chrome is designed by UI professionals who study how a user interacts with a device"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
         </LinearLayout>

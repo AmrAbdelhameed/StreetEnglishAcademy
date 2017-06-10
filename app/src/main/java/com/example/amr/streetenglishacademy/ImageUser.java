@@ -20,9 +20,7 @@ public class ImageUser extends AppCompatActivity {
         String name = b.getString("nname");
         setTitle(name);
 
-        if (name.equals("Ahmed Sharaf")) {
-            bt.setBackgroundResource(R.mipmap.amr);
-        } else if (name.equals("Ismail Arafa")) {
+        if (name.equals("Ismail Arafa")) {
             bt.setBackgroundResource(R.mipmap.amr);
         } else if (name.equals("Mohammed Abdo")) {
             bt.setBackgroundResource(R.mipmap.amr);

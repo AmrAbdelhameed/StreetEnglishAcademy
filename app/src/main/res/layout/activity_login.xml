@@ -32,8 +32,8 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:padding="15dp"
-                    android:text="Please Enter Your Name *"
-                    android:textSize="25dp" />
+                    android:text="Enter Your Name *"
+                    android:textSize="20dp" />
 
                 <EditText
                     android:id="@+id/txtEmailLogin"
@@ -60,7 +60,7 @@
                     android:layout_marginTop="20dp"
                     android:background="#000000"
                     android:onClick="btnUserLogin_Click"
-                    android:text="Login"
+                    android:text="Done"
                     android:textAllCaps="false"
                     android:textColor="#ffffff"
                     android:textSize="20dp"

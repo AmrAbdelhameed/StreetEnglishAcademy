@@ -41,7 +41,7 @@
             android:label="Evaluate For Us" />
         <activity
             android:name=".Login"
-            android:label="Login Now" />
+            android:label="Registration" />
         <activity
             android:name=".ShowAllReviews"
             android:label="Show All Reviews">
