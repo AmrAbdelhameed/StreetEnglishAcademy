@@ -2,12 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="?android:attr/listPreferredItemHeight"
-    android:padding="6dip">
+    android:padding="@dimen/_6sdp">
 
     <Button
         android:id="@+id/list_item_btn"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="@dimen/_75sdp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentTop="true"
         android:background="@mipmap/ic_launcher" />
@@ -15,16 +15,16 @@
     <TextView
         android:id="@+id/destext"
         android:layout_width="fill_parent"
-        android:layout_height="26dip"
+        android:layout_height="@dimen/_26ssp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="@dimen/_10ssp"
         android:layout_toRightOf="@id/list_item_btn"
         android:ellipsize="marquee"
         android:singleLine="true"
         android:clickable="true"
         android:text="Position"
-        android:textSize="12sp" />
+        android:textSize="@dimen/_12ssp" />
 
     <TextView
         android:id="@+id/list_item_text"
@@ -34,11 +34,11 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_alignWithParentIfMissing="true"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="@dimen/_10ssp"
         android:layout_toRightOf="@id/list_item_btn"
         android:clickable="true"
         android:gravity="center_vertical"
         android:text="Name"
-        android:textSize="16sp" />
+        android:textSize="@dimen/_16ssp" />
 
 </RelativeLayout>

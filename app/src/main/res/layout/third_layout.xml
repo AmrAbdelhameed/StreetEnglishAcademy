@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F0EEEE"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/_16sdp"
+    android:paddingLeft="@dimen/_16sdp"
+    android:paddingRight="@dimen/_16sdp"
+    android:paddingTop="@dimen/_16sdp"
     tools:context="com.example.amr.streetenglishacademy.MainActivity">
 
     <ScrollView
@@ -22,7 +22,7 @@
             <Button
                 android:id="@+id/image_team"
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="@dimen/_300sdp"
                 android:background="@mipmap/newiconnn"
                 android:clickable="true"
                 android:scaleType="centerCrop" />
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/_10ssp"
                 android:text="Street English Academy"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -41,8 +41,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="3dp"
-                android:padding="7dp"
+                android:layout_marginTop="@dimen/_3ssp"
+                android:padding="@dimen/_7ssp"
                 android:text="hehehehehe"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -51,8 +51,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="3dp"
-                android:padding="7dp"
+                android:text="hahahahah"
+                android:layout_marginTop="@dimen/_3ssp"
+                android:padding="@dimen/_7ssp"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
         </LinearLayout>
