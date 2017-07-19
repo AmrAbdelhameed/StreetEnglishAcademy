@@ -15,16 +15,18 @@
         <activity
             android:name=".Splash"
             android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="Street English Academy"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:label=""
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings">
@@ -44,10 +46,8 @@
             android:label="Registration" />
         <activity
             android:name=".ShowAllReviews"
-            android:label="Show All Reviews">
-        </activity>
-        <activity android:name=".DetailsReview">
-        </activity>
+            android:label="Show All Reviews"></activity>
+        <activity android:name=".DetailsReview"></activity>
     </application>
 
 </manifest>

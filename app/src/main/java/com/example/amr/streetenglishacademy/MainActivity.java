@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
+//        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -57,30 +57,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Intent i = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(i);
-            return true;
-        }
-        if (id == R.id.action_reviews) {
-            Intent i = new Intent(MainActivity.this, Login.class);
-            startActivity(i);
-        }
-        if (id == R.id.action_logout) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage(R.string.finish_program)
-                    .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            finish();
-                        }
-                    }).setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
-                    // User cancelled the dialog
-                }
-            });
-            AlertDialog d = builder.create();
-            d.setTitle("Are you sure");
-            d.show();
+        if (id == R.id.home) {
+            finish();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -123,6 +101,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.twitter.com/")));
         } else if (id == R.id.nav_share3) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/")));
+        } else if (id == R.id.nav_setting) {
+            Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(i);
+        } else if (id == R.id.nav_review) {
+            Intent i = new Intent(MainActivity.this, Login.class);
+            startActivity(i);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -68,4 +68,11 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+
+    <string name="setting">Feedback &amp; Setting</string>
+
+    <string name="address">40 شارع الدقي - اعلي سوبر ماركت اسواق الحبايب - الدور الثاني - دقيقة واحدة من محطة مترو الدقي</string>
+
+    <string name="about">احنا تيم Street English Academy هدفنا انك توصل للاحتراف و عشان كده عملنا ورش عمل (كورسات) من البداية للاحتراف (ماتخفش من البداية فعلا) انجليزي عام و محادثات و كلمات حياتية و استمتاع و مشاهدة افلام و برامج تليفزيونية و مسلسلات بالانجليزي و بنحطك في بيئة اللغة علشان تعرف تسمع و تتكلم و تقرا و تكتب</string>
+
 </resources>

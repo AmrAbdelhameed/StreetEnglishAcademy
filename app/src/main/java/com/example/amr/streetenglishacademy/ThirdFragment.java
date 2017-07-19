@@ -12,21 +12,20 @@ public class ThirdFragment extends Fragment {
 
     View myView;
 
-    TextView t,t2;
+    TextView t, t2;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         myView = inflater.inflate(R.layout.third_layout, container, false);
 
-        t = (TextView)myView.findViewById(R.id.address_sea);
+        t = (TextView) myView.findViewById(R.id.address_sea);
         //description_sea
-        t2 = (TextView)myView.findViewById(R.id.description_sea);
+        t2 = (TextView) myView.findViewById(R.id.description_sea);
 
-        t.setText("40 شارع الدقي - اعلي سوبر ماركت اسواق الحبايب - الدور الثاني - دقيقة واحده من محطة مترو الدقي");
+        t.setText(R.string.address);
 
-        t2.setText("احنا تيم Street English Academy هدفنا انك توصل للاحتراف في تعلم اللغة الإنجليزية و وعشان كده عملنا ورش عمل (كورسات) من البداية للاحتراف ( ما تخفاش من البداية فعلا). انجليزي عام و محادثات و كلمات حياتية و استماع و مشاهدة افلام و برامج تلفزيونية و مسلسلات بالانجليزي و بنحطك في بيئة اللغة عشان تعرف تسمع و تتكلم و تقرأ و تكتب");
-
+        t2.setText(R.string.about);
         return myView;
     }
 }
