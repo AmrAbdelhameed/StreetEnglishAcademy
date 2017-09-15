@@ -4,35 +4,39 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.ImageView;
 
 public class Splash extends AppCompatActivity {
-    MediaPlayer mediaPlayer;
+
+    Button i_splash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        Thread timer = new Thread(new Runnable() {
-            @Override
+
+        i_splash = (Button) findViewById(R.id.i_splash);
+
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.mytransition);
+        i_splash.startAnimation(animation);
+
+        final Intent i = new Intent(this, MainActivity.class);
+        Thread timer = new Thread() {
             public void run() {
                 try {
-                    mediaPlayer = MediaPlayer.create(Splash.this, R.raw.splash_voice);
-                    mediaPlayer.start();
-                    Thread.sleep(1500);
+                    sleep(3000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
-                    Intent intent = new Intent(Splash.this, MainActivity.class);
-                    startActivity(intent);
-                    Splash.this.finish();
+                    startActivity(i);
+                    finish();
                 }
             }
-        });
+        };
         timer.start();
-    }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
     }
 }

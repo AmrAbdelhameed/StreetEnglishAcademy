@@ -1,73 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F0EDED"
-    android:paddingBottom="@dimen/_16sdp"
-    android:paddingLeft="@dimen/_16sdp"
-    android:paddingRight="@dimen/_16sdp"
-    android:paddingTop="@dimen/_16sdp"
     tools:context="com.example.amr.streetenglishacademy.Login">
 
-    <FrameLayout
-        android:id="@+id/content_frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Name *"
+        android:textSize="@dimen/_20sp"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/_8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="@dimen/_8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp" />
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/txtEmailLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_20sp"
+        android:hint="Enter Here"
+        android:inputType="textPersonName"
+        android:layout_marginTop="@dimen/_8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textname"
+        android:layout_marginLeft="@dimen/_8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="@dimen/_8dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="vertical">
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:onClick="btnUserLogin_Click"
+        android:text="Done"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_20sp"
+        android:layout_marginRight="@dimen/_8dp"
+        app:layout_constraintRight_toRightOf="@+id/txtEmailLogin"
+        android:layout_marginTop="@dimen/_8dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmailLogin" />
 
-                <TextView
-                    android:id="@+id/textname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:gravity="center"
-                    android:padding="@dimen/_15ssp"
-                    android:text="Enter Your Name *"
-                    android:textSize="@dimen/_20ssp" />
-
-                <EditText
-                    android:id="@+id/txtEmailLogin"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_50ssp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center_horizontal|top"
-                    android:layout_marginTop="@dimen/_14ssp"
-                    android:background="@drawable/amr3"
-                    android:drawableLeft="@drawable/ic_person_black_24dp"
-                    android:drawablePadding="@dimen/_16ssp"
-                    android:ems="10"
-                    android:gravity="left"
-                    android:hint="Enter Here"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/_15ssp" />
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="@dimen/_250sdp"
-                    android:layout_height="@dimen/_70sdp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center_horizontal|top"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    android:background="#000000"
-                    android:onClick="btnUserLogin_Click"
-                    android:text="Done"
-                    android:textAllCaps="false"
-                    android:textColor="#ffffff"
-                    android:textSize="@dimen/_20sdp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-        </ScrollView>
-
-    </FrameLayout>
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -8,12 +8,9 @@
     <Button
         android:id="@+id/HH"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_300sdp"
+        android:layout_height="@dimen/_300dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:background="@mipmap/ic_launcher"
-        android:clickable="true"
-        android:scaleType="centerCrop" />
+        android:background="@mipmap/ic_launcher" />
 
 </RelativeLayout>

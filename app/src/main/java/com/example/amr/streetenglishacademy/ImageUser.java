@@ -18,7 +18,6 @@ public class ImageUser extends AppCompatActivity {
         Intent in = getIntent();
         Bundle b = in.getExtras();
         String name = b.getString("nname");
-        setTitle(name);
 
         if (name.equals("Ismail Arafa")) {
             bt.setBackgroundResource(R.mipmap.amr);

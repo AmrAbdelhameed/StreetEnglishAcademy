@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F0EEEE"
-    android:paddingBottom="@dimen/_16sdp"
-    android:paddingLeft="@dimen/_16sdp"
-    android:paddingRight="@dimen/_16sdp"
-    android:paddingTop="@dimen/_16sdp"
     tools:context="com.example.amr.streetenglishacademy.Splash">
 
-    <FrameLayout
-        android:id="@+id/content_frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_300sdp"
-            android:layout_gravity="center"
-            android:background="@mipmap/newiconnn" />
-
-    </FrameLayout>
-</RelativeLayout>
+    <Button
+        android:id="@+id/i_splash"
+        android:layout_width="@dimen/_250dp"
+        android:layout_height="@dimen/_250dp"
+        android:layout_gravity="center"
+        android:background="@mipmap/newiconnn"
+        android:layout_marginRight="@dimen/_8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="@dimen/_8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_8dp" />
+    
+</android.support.constraint.ConstraintLayout>
