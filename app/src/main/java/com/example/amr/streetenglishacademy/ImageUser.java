@@ -17,18 +17,8 @@ public class ImageUser extends AppCompatActivity {
 
         Intent in = getIntent();
         Bundle b = in.getExtras();
-        String name = b.getString("nname");
+        int name = b.getInt("pic");
 
-        if (name.equals("Ismail Arafa")) {
-            bt.setBackgroundResource(R.mipmap.amr);
-        } else if (name.equals("Mohammed Abdo")) {
-            bt.setBackgroundResource(R.mipmap.amr);
-        } else if (name.equals("Doaa Mohammed")) {
-            bt.setBackgroundResource(R.mipmap.amr);
-        } else if (name.equals("Asmaa Mahmoud")) {
-            bt.setBackgroundResource(R.mipmap.amr);
-        } else if (name.equals("Amr Abdelhameed")) {
-            bt.setBackgroundResource(R.mipmap.amr);
-        }
+        bt.setBackgroundResource(name);
     }
 }

@@ -1,30 +1,21 @@
 package com.example.amr.streetenglishacademy;
 
-import android.app.AlertDialog;
 import android.app.Fragment;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class AboutTeamFragment extends Fragment {
 
     View view;
-    private ArrayList<String> data = new ArrayList<String>();
-    private ArrayList<String> datapos = new ArrayList<String>();
-    private ArrayList<String> datades = new ArrayList<String>();
-    private ArrayList<Integer> datapic = new ArrayList<Integer>();
+    MyListAdaper adaper;
+    private ArrayList<String> data,datades, datapos;
+    private ArrayList<Integer> datapic;
 
     @Nullable
     @Override
@@ -33,114 +24,129 @@ public class AboutTeamFragment extends Fragment {
 
         ListView lv = (ListView) view.findViewById(R.id.listview_product);
 
+        data = new ArrayList<String>();
+        datapos = new ArrayList<String>();
+        datades = new ArrayList<String>();
+        datapic = new ArrayList<Integer>();
+
         data.add("Ismail Arafa");
-        datapos.add("President and Co-Founder");
-        datades.add("Udacity was asked to work this application of MAL | Google | Udacity and took a certificate of them");
-        datapic.add(R.mipmap.amr);
+        datapos.add("President");
+        datades.add("Faculty of arts ain shams university");
+        datapic.add(R.mipmap.i1);
 
-        data.add("Mohammed Abdo");
-        datapos.add("Operation Manger - English Instructor");
-        datades.add("Udacity was asked to work this application of MAL | Google | Udacity and took a certificate of them");
-        datapic.add(R.mipmap.amr);
+        data.add("Ahmed Atef");
+        datapos.add("Vice president");
+        datades.add("Faculty of commerce english section ain shams university");
+        datapic.add(R.mipmap.i2);
 
-        data.add("Doaa Mohammed");
-        datapos.add("Princess");
-        datades.add("Udacity was asked to work this application of MAL | Google | Udacity and took a certificate of them");
-        datapic.add(R.mipmap.amr);
+        data.add("Maged Moustafa");
+        datapos.add("Vice president");
+        datades.add("Faculty of commerce english section helwan university -Business adminstration");
+        datapic.add(R.mipmap.i3);
 
-        data.add("Asmaa Mahmoud");
-        datapos.add("Designer");
-        datades.add("Udacity was asked to work this application of MAL | Google | Udacity and took a certificate of them");
-        datapic.add(R.mipmap.amr);
+        data.add("Mohammed aymn");
+        datapos.add("Vice president)");
+        datades.add("Faculty of commerce english section helwan university");
+        datapic.add(R.mipmap.i4);
+
+        data.add("Omnia Youssef");
+        datapos.add("Team leader");
+        datades.add("Faculty of science ain shams university");
+        datapic.add(R.mipmap.i5);
+
+        data.add("Alshimaa Mamdoah");
+        datapos.add("Team leader");
+        datades.add("Al–Azhar University Faculty of Humanities _Persian Department");
+        datapic.add(R.mipmap.i6);
+
+        data.add("Sara Khiry");
+        datapos.add("Team leader");
+        datades.add("Faculty of physical education");
+        datapic.add(R.mipmap.i7);
+
+        data.add("Aya Mohammed");
+        datapos.add("Team leader");
+        datades.add("Faculty of commerce and business administration");
+        datapic.add(R.mipmap.i8);
+
+        data.add("Eslam Abdelshafy");
+        datapos.add("Team leader");
+        datades.add("Faculty of engineering helwan university");
+        datapic.add(R.mipmap.i9);
+
+        data.add("Mohammed Arafa");
+        datapos.add("Evaluator");
+        datades.add("Faculty of business administration helwan university");
+        datapic.add(R.mipmap.i10);
+
+        data.add("Fatma Ali");
+        datapos.add("Evaluator");
+        datades.add("Faculty of arts zagazig university philosophy department");
+        datapic.add(R.mipmap.i11);
+
+        data.add("Rehab Mohammed");
+        datapos.add("Evaluator");
+        datades.add("Faculty of commerce and business adminsistration");
+        datapic.add(R.mipmap.i12);
+
+        data.add("Samir Sabry");
+        datapos.add("Evaluator");
+        datades.add("Faculty of commerce english section helwan university");
+        datapic.add(R.mipmap.i13);
+
+        data.add("Amira Maghwery");
+        datapos.add("Evaluator");
+        datades.add("Faculty of commerce ain shams university");
+        datapic.add(R.mipmap.i14);
+
+        data.add("Amany Adel");
+        datapos.add("Evaluator");
+        datades.add("Faculty of art ain shams university philosophy department");
+        datapic.add(R.mipmap.i15);
+
+        data.add("Yasmin Abdelrazik");
+        datapos.add("Evaluator");
+        datades.add("Faculty of commerce al azher university");
+        datapic.add(R.mipmap.i16);
+
+        data.add("Norhan Khaled");
+        datapos.add("Instructor");
+        datades.add("Faculty of commerce cairo university");
+        datapic.add(R.mipmap.i17);
+
+        data.add("Amira Saad");
+        datapos.add("Instructor");
+        datades.add("Faculty of arts ain shams univrrsity media department");
+        datapic.add(R.mipmap.i18);
+
+        data.add("Mohammed Alsisi");
+        datapos.add("Instructor");
+        datades.add("Faculty of language and translation");
+        datapic.add(R.mipmap.i19);
+
+        data.add("Asmaa Ezzat");
+        datapos.add("Instructor");
+        datades.add("Faculty of arts cairo university");
+        datapic.add(R.mipmap.i20);
+
+        data.add("Mohammed Abdeltwab");
+        datapos.add("Instructor");
+        datades.add("Faculty of commerce ain shams university");
+        datapic.add(R.mipmap.i21);
+
+        data.add("Maha Hamdy");
+        datapos.add("Instructor");
+        datades.add("Faculty of commerce cairo university");
+        datapic.add(R.mipmap.i22);
 
         data.add("Amr Abdelhameed");
         datapos.add("Android Developer");
-        datades.add("Udacity was asked to work this application of MAL | Google | Udacity and took a certificate of them");
+        datades.add("Faculty of computer and information science ain shams university");
         datapic.add(R.mipmap.amr);
 
-        lv.setAdapter(new MyListAdaper(getActivity(), R.layout.list_item, data));
+        adaper = new MyListAdaper(getActivity(), data, datapos, datades, datapic);
+        lv.setAdapter(adaper);
 
         return view;
-    }
-
-    private class MyListAdaper extends ArrayAdapter<String> {
-        private int layout;
-        private List<String> mObjects;
-
-        private MyListAdaper(Context context, int resource, List<String> objects) {
-            super(context, resource, objects);
-            mObjects = objects;
-            layout = resource;
-        }
-
-        @Override
-        public View getView(final int position, View convertView, ViewGroup parent) {
-            ViewHolder mainViewholder = null;
-            if (convertView == null) {
-                LayoutInflater inflater = LayoutInflater.from(getContext());
-                convertView = inflater.inflate(layout, parent, false);
-                ViewHolder viewHolder = new ViewHolder();
-                viewHolder.title = (TextView) convertView.findViewById(R.id.list_item_text);
-                viewHolder.des = (TextView) convertView.findViewById(R.id.destext);
-                viewHolder.button = (Button) convertView.findViewById(R.id.list_item_btn);
-                convertView.setTag(viewHolder);
-            }
-            mainViewholder = (ViewHolder) convertView.getTag();
-            mainViewholder.button.setBackgroundResource(datapic.get(position));
-            mainViewholder.button.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    Intent i = new Intent(getContext(), ImageUser.class);
-                    Bundle b = new Bundle();
-                    b.putString("nname", data.get(position));
-                    i.putExtras(b);
-                    startActivity(i);
-                }
-            });
-
-            mainViewholder.title.setText(data.get(position));
-            mainViewholder.des.setText(datapos.get(position));
-
-            mainViewholder.title.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                    builder.setMessage(datades.get(position))
-                            .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    // User cancelled the dialog
-                                }
-                            });
-                    AlertDialog d = builder.create();
-                    d.setTitle("About " + data.get(position));
-                    d.show();
-                }
-            });
-
-            mainViewholder.des.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                    builder.setMessage(datades.get(position))
-                            .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    // User cancelled the dialog
-                                }
-                            });
-                    AlertDialog d = builder.create();
-                    d.setTitle("About " + data.get(position));
-                    d.show();
-                }
-            });
-
-            return convertView;
-        }
-    }
-
-    public class ViewHolder {
-
-        TextView title, des;
-        Button button;
     }
 }

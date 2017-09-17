@@ -82,16 +82,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_team_sea) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new AboutTeamFragment()).commit();
         } else if (id == R.id.nav_share1) {
-            String num = "01120319547";
+            String num = "01158748131";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num, null)));
-        } else if (id == R.id.nav_share22) {
-            String num2 = "01009396674";
-            startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num2, null)));
-        } else if (id == R.id.nav_share32) {
-            String num3 = "01206512731";
-            startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num3, null)));
-        } else if (id == R.id.nav_insta) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/")));
+        }else if (id == R.id.nav_share2) {
+            String num = "01114529420";
+            startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num, null)));
+        }  else if (id == R.id.nav_insta) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/streetenglishacademy/")));
         } else if (id == R.id.nav_gmail) {
             Intent emailIntent = new Intent(Intent.ACTION_SENDTO
                     , Uri.fromParts("mailto", "ismailarafa999@gmail.com", null));
@@ -99,11 +96,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             emailIntent.putExtra(Intent.EXTRA_TEXT, "");
             startActivity(Intent.createChooser(emailIntent, "Send email..."));
         } else if (id == R.id.nav_share) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/Street.English.Academy/?ref=bookmarks")));
-        } else if (id == R.id.nav_share2) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.twitter.com/")));
-        } else if (id == R.id.nav_share3) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/")));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/Street.English.Academy/")));
+        }  else if (id == R.id.nav_share3) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/channel/UCeu010bn7_v83HQ1xo2vr6Q/")));
         } else if (id == R.id.nav_setting) {
             Intent i = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(i);

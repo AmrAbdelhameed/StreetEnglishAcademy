@@ -26,16 +26,11 @@
             <item
                 android:id="@+id/nav_share1"
                 android:icon="@mipmap/ic_phone_in_talk_black_24dp"
-                android:title="01120319547" />
+                android:title="01158748131" />
             <item
-                android:id="@+id/nav_share22"
+                android:id="@+id/nav_share2"
                 android:icon="@mipmap/ic_phone_in_talk_black_24dp"
-                android:title="01009396674" />
-            <item
-                android:id="@+id/nav_share32"
-                android:icon="@mipmap/ic_phone_in_talk_black_24dp"
-                android:title="01206512731" />
-
+                android:title="01114529420" />
         </menu>
     </item>
     <item android:title="Communicate">
@@ -44,10 +39,6 @@
                 android:id="@+id/nav_share"
                 android:icon="@mipmap/facebook"
                 android:title="Facebook" />
-            <item
-                android:id="@+id/nav_share2"
-                android:icon="@mipmap/twitter"
-                android:title="Twitter" />
             <item
                 android:id="@+id/nav_insta"
                 android:icon="@mipmap/insta"
