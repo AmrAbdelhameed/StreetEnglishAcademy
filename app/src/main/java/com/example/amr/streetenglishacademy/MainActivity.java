@@ -2,8 +2,10 @@ package com.example.amr.streetenglishacademy;
 
 import android.app.AlertDialog;
 import android.app.FragmentManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -16,6 +18,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    public static String FACEBOOK_URL = "https://www.facebook.com/Street.English.Academy/";
+    public static String FACEBOOK_PAGE_ID = "Street.English.Academy";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +72,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return super.onOptionsItemSelected(item);
     }
 
+    public String getFacebookPageURL(Context context) {
+        PackageManager packageManager = context.getPackageManager();
+        try {
+            int versionCode = packageManager.getPackageInfo("com.facebook.katana", 0).versionCode;
+            if (versionCode >= 3002850) { //newer versions of fb app
+                return "fb://facewebmodal/f?href=" + FACEBOOK_URL;
+            } else { //older versions of fb app
+                return "fb://page/" + FACEBOOK_PAGE_ID;
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            return FACEBOOK_URL; //normal web url
+        }
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -77,6 +96,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentManager.beginTransaction().replace(R.id.content_frame, new FirstFragment()).commit();
         } else if (id == R.id.nav_second_layout) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new SecondFragment()).commit();
+        }else if (id == R.id.nav_test_layout) {
+            fragmentManager.beginTransaction().replace(R.id.content_frame, new TestFragment()).commit();
         } else if (id == R.id.nav_third_layout) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new ThirdFragment()).commit();
         } else if (id == R.id.nav_team_sea) {
@@ -85,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             String num = "01158748131";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num, null)));
         }else if (id == R.id.nav_share2) {
-            String num = "01114529420";
+            String num = "01158748131";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num, null)));
         }  else if (id == R.id.nav_insta) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/streetenglishacademy/")));
@@ -96,7 +117,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             emailIntent.putExtra(Intent.EXTRA_TEXT, "");
             startActivity(Intent.createChooser(emailIntent, "Send email..."));
         } else if (id == R.id.nav_share) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/Street.English.Academy/")));
+//            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/Street.English.Academy/")));
+            Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
+            String facebookUrl = getFacebookPageURL(MainActivity.this);
+            facebookIntent.setData(Uri.parse(facebookUrl));
+            startActivity(facebookIntent);
         }  else if (id == R.id.nav_share3) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/channel/UCeu010bn7_v83HQ1xo2vr6Q/")));
         } else if (id == R.id.nav_setting) {

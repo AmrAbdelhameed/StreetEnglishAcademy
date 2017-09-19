@@ -10,7 +10,11 @@
         <item
             android:id="@+id/nav_second_layout"
             android:icon="@mipmap/ic_folder_black_24dp"
-            android:title="Content Course" />
+            android:title="Content" />
+        <item
+            android:id="@+id/nav_test_layout"
+            android:icon="@mipmap/ic_folder_black_24dp"
+            android:title="Test Your English" />
         <item
             android:id="@+id/nav_third_layout"
             android:icon="@mipmap/ic_account_balance_black_24dp"
@@ -60,7 +64,7 @@
             <item
                 android:id="@+id/nav_review"
                 android:icon="@mipmap/reviews"
-                android:title="Evaluate for us" />
+                android:title="Your Feedback" />
             <item
                 android:id="@+id/nav_setting"
                 android:icon="@mipmap/iconsetting"
