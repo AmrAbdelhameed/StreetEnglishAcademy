@@ -16,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -96,9 +97,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentManager.beginTransaction().replace(R.id.content_frame, new FirstFragment()).commit();
         } else if (id == R.id.nav_second_layout) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new SecondFragment()).commit();
-        }else if (id == R.id.nav_test_layout) {
-            fragmentManager.beginTransaction().replace(R.id.content_frame, new TestFragment()).commit();
-        } else if (id == R.id.nav_third_layout) {
+        }
+//        else if (id == R.id.nav_test_layout) {
+//            fragmentManager.beginTransaction().replace(R.id.content_frame, new TestFragment()).commit();
+//        }
+        else if (id == R.id.nav_third_layout) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new ThirdFragment()).commit();
         } else if (id == R.id.nav_team_sea) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new AboutTeamFragment()).commit();
@@ -106,13 +109,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             String num = "01158748131";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num, null)));
         }else if (id == R.id.nav_share2) {
-            String num = "01158748131";
+            String num = "01022173649";
+            startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num, null)));
+        }else if (id == R.id.nav_sha4) {
+            String num = "01221152518";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num, null)));
         }  else if (id == R.id.nav_insta) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/streetenglishacademy/")));
         } else if (id == R.id.nav_gmail) {
             Intent emailIntent = new Intent(Intent.ACTION_SENDTO
-                    , Uri.fromParts("mailto", "ismailarafa999@gmail.com", null));
+                    , Uri.fromParts("mailto", "streetenglishacademy999@gmail.com", null));
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, "");
             emailIntent.putExtra(Intent.EXTRA_TEXT, "");
             startActivity(Intent.createChooser(emailIntent, "Send email..."));
@@ -124,12 +130,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(facebookIntent);
         }  else if (id == R.id.nav_share3) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/channel/UCeu010bn7_v83HQ1xo2vr6Q/")));
-        } else if (id == R.id.nav_setting) {
-            Intent i = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(i);
-        } else if (id == R.id.nav_review) {
-            Intent i = new Intent(MainActivity.this, Login.class);
-            startActivity(i);
+        }
+//        else if (id == R.id.nav_setting) {
+//            Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+//            startActivity(i);
+//        }
+        else if (id == R.id.nav_review) {
+//            Intent i = new Intent(MainActivity.this, Login.class);
+//            startActivity(i);
+            Toast.makeText(this, "Google Form Feedback", Toast.LENGTH_SHORT).show();
+//            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/drive/folders/0B4Db4KEZ1GtzNGN0ZHNUQjA1cDQ")));
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

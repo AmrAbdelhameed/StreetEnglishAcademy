@@ -12,10 +12,6 @@
             android:icon="@mipmap/ic_folder_black_24dp"
             android:title="Content" />
         <item
-            android:id="@+id/nav_test_layout"
-            android:icon="@mipmap/ic_folder_black_24dp"
-            android:title="Test Your English" />
-        <item
             android:id="@+id/nav_third_layout"
             android:icon="@mipmap/ic_account_balance_black_24dp"
             android:title="About SEA" />
@@ -25,20 +21,31 @@
             android:title="About Team SEA" />
 
     </group>
-    <item android:title="Call Us">
+    <item android:title="Call us">
         <menu>
             <item
                 android:id="@+id/nav_share1"
                 android:icon="@mipmap/ic_phone_in_talk_black_24dp"
                 android:title="01158748131" />
+
             <item
                 android:id="@+id/nav_share2"
                 android:icon="@mipmap/ic_phone_in_talk_black_24dp"
-                android:title="01114529420" />
+                android:title="01022173649" />
+
+            <item
+                android:id="@+id/nav_sha4"
+                android:icon="@mipmap/ic_phone_in_talk_black_24dp"
+                android:title="01221152518" />
+
         </menu>
     </item>
-    <item android:title="Communicate">
+    <item android:title="Check this out..">
         <menu>
+            <item
+                android:id="@+id/nav_share3"
+                android:icon="@mipmap/ic_subscriptions_black_24dp"
+                android:title="YouTube" />
             <item
                 android:id="@+id/nav_share"
                 android:icon="@mipmap/facebook"
@@ -51,11 +58,6 @@
                 android:id="@+id/nav_gmail"
                 android:icon="@mipmap/gmail"
                 android:title="Gmail" />
-            <item
-                android:id="@+id/nav_share3"
-                android:icon="@mipmap/ic_subscriptions_black_24dp"
-                android:title="YouTube" />
-
         </menu>
     </item>
 
@@ -65,10 +67,6 @@
                 android:id="@+id/nav_review"
                 android:icon="@mipmap/reviews"
                 android:title="Your Feedback" />
-            <item
-                android:id="@+id/nav_setting"
-                android:icon="@mipmap/iconsetting"
-                android:title="Setting" />
         </menu>
     </item>
 
