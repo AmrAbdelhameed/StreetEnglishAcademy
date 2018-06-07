@@ -1,14 +1,14 @@
 package com.example.amr.streetenglishacademy;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 public class DetailsReview extends AppCompatActivity {
 
-    TextView pos, neg;
+    TextView pos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,16 +16,17 @@ public class DetailsReview extends AppCompatActivity {
         setContentView(R.layout.activity_details_review);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        pos = (TextView) findViewById(R.id.i2);
+        pos = findViewById(R.id.i2);
 
         Bundle extras = getIntent().getExtras();
         String name = extras.getString("name_user");
         String pos_op = extras.getString("positive_user");
 
-        setTitle("Opinion of "+name);
-        pos.setText("Opinion of "+name+" : "+pos_op);
+        setTitle("Opinion of " + name);
+        pos.setText("Opinion of " + name + " : " + pos_op);
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;

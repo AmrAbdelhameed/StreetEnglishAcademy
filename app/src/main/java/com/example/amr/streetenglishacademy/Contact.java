@@ -8,7 +8,9 @@ public class Contact {
     String name;
     String positive;
 
-    public Contact() {
+    public Contact(String name, String positive) {
+        this.name = name;
+        this.positive = positive;
     }
 
     public String getName() {
@@ -17,13 +19,6 @@ public class Contact {
 
     public String getPositive() {
         return positive;
-    }
-
-
-
-    public Contact(String name, String positive) {
-        this.name = name;
-        this.positive = positive;
     }
 
 }

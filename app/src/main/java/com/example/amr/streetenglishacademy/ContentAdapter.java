@@ -13,8 +13,6 @@ public class ContentAdapter extends BaseAdapter {
     private Context mContext;
     private List<ContentItem> mCItemList;
 
-    //Constructor
-
     public ContentAdapter(Context mContext, List<ContentItem> mTeamItemList) {
         this.mContext = mContext;
         this.mCItemList = mTeamItemList;
@@ -38,13 +36,12 @@ public class ContentAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = View.inflate(mContext, R.layout.item_content, null);
+
         TextView tvName = (TextView) v.findViewById(R.id.tv_namecontent);
         TextView tvPrice = (TextView) v.findViewById(R.id.tv_no_of_items);
 
-        //Set text for TextView
         tvName.setText(mCItemList.get(position).getNameContent());
         tvPrice.setText(mCItemList.get(position).getOpenDriveMsg());
-
         v.setTag(mCItemList.get(position).getId());
 
         return v;

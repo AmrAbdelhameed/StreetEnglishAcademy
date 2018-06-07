@@ -1,9 +1,7 @@
 package com.example.amr.streetenglishacademy;
 
-import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -108,13 +106,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_share1) {
             String num = "01158748131";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num, null)));
-        }else if (id == R.id.nav_share2) {
+        } else if (id == R.id.nav_share2) {
             String num = "01022173649";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num, null)));
-        }else if (id == R.id.nav_sha4) {
+        } else if (id == R.id.nav_sha4) {
             String num = "01221152518";
             startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", num, null)));
-        }  else if (id == R.id.nav_insta) {
+        } else if (id == R.id.nav_insta) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/streetenglishacademy/")));
         } else if (id == R.id.nav_gmail) {
             Intent emailIntent = new Intent(Intent.ACTION_SENDTO
@@ -128,14 +126,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             String facebookUrl = getFacebookPageURL(MainActivity.this);
             facebookIntent.setData(Uri.parse(facebookUrl));
             startActivity(facebookIntent);
-        }  else if (id == R.id.nav_share3) {
+        } else if (id == R.id.nav_share3) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/channel/UCeu010bn7_v83HQ1xo2vr6Q/")));
-        }
-//        else if (id == R.id.nav_setting) {
-//            Intent i = new Intent(MainActivity.this, SettingsActivity.class);
-//            startActivity(i);
-//        }
-        else if (id == R.id.nav_review) {
+        } else if (id == R.id.nav_review) {
 //            Intent i = new Intent(MainActivity.this, Login.class);
 //            startActivity(i);
             Toast.makeText(this, "Google Form Feedback", Toast.LENGTH_SHORT).show();

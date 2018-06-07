@@ -23,21 +23,16 @@ public class Login extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         txtEmailLogin = (EditText) findViewById(R.id.txtEmailLogin);
-
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        //In onresume fetching value from sharedpreference
-        SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
-        //Fetching the boolean value form sharedpreferences
+        SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         loggedIn = sharedPreferences.getBoolean(Config.LOGGEDIN_SHARED_PREF, false);
 
-        //If we will get true
         if (loggedIn) {
-            //We will start the Profile Activity
             Intent intent = new Intent(Login.this, Evaluation.class);
             startActivity(intent);
             finish();
@@ -50,12 +45,9 @@ public class Login extends AppCompatActivity {
             Toast.makeText(Login.this, "Please Enter Your Name", Toast.LENGTH_SHORT).show();
         } else {
             SharedPreferences sharedPreferences = Login.this.getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-
             SharedPreferences.Editor editor = sharedPreferences.edit();
-
             editor.putBoolean(Config.LOGGEDIN_SHARED_PREF, true);
             editor.putString(Config.EMAIL_SHARED_PREF, txtEmailLogin.getText().toString());
-
             editor.commit();
 
             Intent i = new Intent(Login.this, Evaluation.class);

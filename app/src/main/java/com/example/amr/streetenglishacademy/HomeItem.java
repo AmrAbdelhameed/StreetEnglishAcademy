@@ -1,8 +1,8 @@
 package com.example.amr.streetenglishacademy;
 
 public class HomeItem {
-    String nameH, shortDesc, Desc;
-    int imageH;
+    private String nameH, shortDesc, Desc;
+    private int imageH;
 
     public String getNameH() {
         return nameH;

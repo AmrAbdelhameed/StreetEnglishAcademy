@@ -20,12 +20,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class ShowAllReviews extends AppCompatActivity {
-    private static final String TAG = MainActivity.class.getSimpleName();
-    private String room_name;
+    static final String TAG = MainActivity.class.getSimpleName();
+    String room_name;
     ArrayAdapter<String> adapter;
-    private DatabaseReference root;
+    DatabaseReference root;
     ListView lv;
     ArrayList<String> array_positive, array_Name;
+    private String namee, positiv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,8 +90,6 @@ public class ShowAllReviews extends AppCompatActivity {
             }
         });
     }
-
-    private String namee, positiv;
 
     private void append_chat_conversation(DataSnapshot dataSnapshot) {
 

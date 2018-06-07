@@ -17,9 +17,9 @@ import java.util.List;
 public class SecondFragment extends Fragment {
 
     View myView;
-    private ListView lvProduct;
-    private ContentAdapter adapter;
-    private List<ContentItem> mCItemList;
+    ListView lvProduct;
+    ContentAdapter adapter;
+    List<ContentItem> mCItemList;
 
     @Nullable
     @Override
@@ -29,8 +29,7 @@ public class SecondFragment extends Fragment {
         lvProduct = (ListView) myView.findViewById(R.id.listview_product2);
 
         mCItemList = new ArrayList<>();
-        //Add sample data for list
-        //We can get data from DB, webservice here
+
         mCItemList.add(new ContentItem(8, "Phonetics", "Direct to Google Drive"));
         mCItemList.add(new ContentItem(5, "Vocabulary", "Direct to Google Drive"));
         mCItemList.add(new ContentItem(9, "Grammar", "Direct to Google Drive"));
@@ -83,7 +82,6 @@ public class SecondFragment extends Fragment {
                 } else if (view.getTag().toString().equals("14")) {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/open?id=1OT58SgQuZo2mS_4Rwxi5QeYl8H7WaLxw")));
                 }
-
             }
         });
 

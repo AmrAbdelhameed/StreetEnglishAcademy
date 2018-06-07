@@ -11,7 +11,6 @@ import android.widget.TextView;
 public class ThirdFragment extends Fragment {
 
     View myView;
-
     TextView t, t2;
 
     @Nullable

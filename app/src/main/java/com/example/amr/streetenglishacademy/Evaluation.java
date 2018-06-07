@@ -22,12 +22,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Evaluation extends AppCompatActivity {
-    private static final String TAG = Login.class.getSimpleName();
+    static final String TAG = Login.class.getSimpleName();
     TextView positive;
-    private String userId;
-    private DatabaseReference mFirebaseDatabase;
-    private FirebaseDatabase mFirebaseInstance;
     String u;
+    String userId;
+    DatabaseReference mFirebaseDatabase;
+    FirebaseDatabase mFirebaseInstance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,9 +87,9 @@ public class Evaluation extends AppCompatActivity {
 
         String nname = u;
         String npositive = positive.getText().toString();
-if (positive.getText().toString().isEmpty()) {
+        if (positive.getText().toString().isEmpty()) {
             Toast.makeText(getApplicationContext(), "Please Enter your opinion ... ", Toast.LENGTH_SHORT).show();
-        }  else {
+        } else {
             if (isNetworkAvailable()) {
                 if (npositive.equalsIgnoreCase("sea")) {
                     Intent i = new Intent(Evaluation.this, ShowAllReviews.class);
