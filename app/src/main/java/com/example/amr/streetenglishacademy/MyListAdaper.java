@@ -22,16 +22,12 @@ import java.util.ArrayList;
 public class MyListAdaper extends BaseAdapter {
 
     private Context mContext;
-    private ArrayList<String> data , datapos, datades;
-    private ArrayList<Integer> datapic;
+    private ArrayList<UserItem> data;
 
     //Constructor
-    public MyListAdaper(Context mContext, ArrayList<String> data, ArrayList<String> datapos, ArrayList<String> datades, ArrayList<Integer> datapic) {
+    public MyListAdaper(Context mContext, ArrayList<UserItem> data) {
         this.mContext = mContext;
         this.data = data;
-        this.datapos = datapos;
-        this.datades = datades;
-        this.datapic = datapic;
     }
 
     @Override
@@ -55,40 +51,18 @@ public class MyListAdaper extends BaseAdapter {
 
         TextView title = (TextView) v.findViewById(R.id.list_item_text);
         TextView pos = (TextView) v.findViewById(R.id.postext);
-        TextView des = (TextView) v.findViewById(R.id.destext);
+        de.hdodenhof.circleimageview.CircleImageView image_user = v.findViewById(R.id.image_user);
 
-        title.setText(data.get(position));
-        pos.setText(datapos.get(position));
-        des.setText(datades.get(position));
+        title.setText(data.get(position).getUserName());
+        pos.setText(data.get(position).getUserPos());
+        image_user.setImageResource(data.get(position).getUserPicture());
 
-        title.setOnClickListener(new View.OnClickListener() {
+        image_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(mContext, ImageUser.class);
                 Bundle b = new Bundle();
-                b.putInt("pic", datapic.get(position));
-                i.putExtras(b);
-                mContext.startActivity(i);
-            }
-        });
-
-        pos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(mContext, ImageUser.class);
-                Bundle b = new Bundle();
-                b.putInt("pic", datapic.get(position));
-                i.putExtras(b);
-                mContext.startActivity(i);
-            }
-        });
-
-        des.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(mContext, ImageUser.class);
-                Bundle b = new Bundle();
-                b.putInt("pic", datapic.get(position));
+                b.putInt("pic", data.get(position).getUserPicture());
                 i.putExtras(b);
                 mContext.startActivity(i);
             }
