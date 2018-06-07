@@ -18,8 +18,8 @@ public class SecondFragment extends Fragment {
 
     View myView;
     private ListView lvProduct;
-    private Content_Adapter adapter;
-    private List<Content_Item> mCItemList;
+    private ContentAdapter adapter;
+    private List<ContentItem> mCItemList;
 
     @Nullable
     @Override
@@ -31,23 +31,23 @@ public class SecondFragment extends Fragment {
         mCItemList = new ArrayList<>();
         //Add sample data for list
         //We can get data from DB, webservice here
-        mCItemList.add(new Content_Item(8, "Phonetics", "Direct to Google Drive"));
-        mCItemList.add(new Content_Item(5, "Vocabulary", "Direct to Google Drive"));
-        mCItemList.add(new Content_Item(9, "Grammar", "Direct to Google Drive"));
-        mCItemList.add(new Content_Item(10, "Listening", "Direct to Google Drive"));
-        mCItemList.add(new Content_Item(11, "Reading", "Direct to Google Drive"));
-        mCItemList.add(new Content_Item(4, "Videos", "Direct to Google Drive"));
-        mCItemList.add(new Content_Item(1, "Conversations", "Direct to Google Drive"));
-        mCItemList.add(new Content_Item(2, "Idioms", "Direct to Google Drive"));
-        mCItemList.add(new Content_Item(3, "Phrasal Verbs", "Direct to Google Drive"));
-        mCItemList.add(new Content_Item(6, "Exercises", "Direct to Google Drive"));
-        mCItemList.add(new Content_Item(7, "Tests", "Direct to Google Drive"));
-        mCItemList.add(new Content_Item(12, "TOEFL", "Direct to Google Drive"));
-        mCItemList.add(new Content_Item(13, "IELTS", "Direct to Google Drive"));
-        mCItemList.add(new Content_Item(14, "Miscellaneous", "Direct to Google Drive"));
+        mCItemList.add(new ContentItem(8, "Phonetics", "Direct to Google Drive"));
+        mCItemList.add(new ContentItem(5, "Vocabulary", "Direct to Google Drive"));
+        mCItemList.add(new ContentItem(9, "Grammar", "Direct to Google Drive"));
+        mCItemList.add(new ContentItem(10, "Listening", "Direct to Google Drive"));
+        mCItemList.add(new ContentItem(11, "Reading", "Direct to Google Drive"));
+        mCItemList.add(new ContentItem(4, "Videos", "Direct to Google Drive"));
+        mCItemList.add(new ContentItem(1, "Conversations", "Direct to Google Drive"));
+        mCItemList.add(new ContentItem(2, "Idioms", "Direct to Google Drive"));
+        mCItemList.add(new ContentItem(3, "Phrasal Verbs", "Direct to Google Drive"));
+        mCItemList.add(new ContentItem(6, "Exercises", "Direct to Google Drive"));
+        mCItemList.add(new ContentItem(7, "Tests", "Direct to Google Drive"));
+        mCItemList.add(new ContentItem(12, "TOEFL", "Direct to Google Drive"));
+        mCItemList.add(new ContentItem(13, "IELTS", "Direct to Google Drive"));
+        mCItemList.add(new ContentItem(14, "Miscellaneous", "Direct to Google Drive"));
 
         //Init adapter
-        adapter = new Content_Adapter(getActivity(), mCItemList);
+        adapter = new ContentAdapter(getActivity(), mCItemList);
         lvProduct.setAdapter(adapter);
 
         lvProduct.setOnItemClickListener(new AdapterView.OnItemClickListener() {

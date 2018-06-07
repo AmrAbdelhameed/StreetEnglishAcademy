@@ -10,17 +10,13 @@
         android:id="@+id/listview_product"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:headerDividersEnabled="false"
-        android:footerDividersEnabled="false"
-        android:divider="#000000"
+        android:divider="@color/colorPrimaryDark"
         android:dividerHeight="1dp"
-        android:layout_marginRight="0dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="0dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="0dp"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="0dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

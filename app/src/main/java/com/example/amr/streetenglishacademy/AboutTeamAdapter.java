@@ -19,13 +19,13 @@ import java.util.ArrayList;
  * Created by amr on 17/09/17.
  */
 
-public class MyListAdaper extends BaseAdapter {
+public class AboutTeamAdapter extends BaseAdapter {
 
     private Context mContext;
     private ArrayList<UserItem> data;
 
     //Constructor
-    public MyListAdaper(Context mContext, ArrayList<UserItem> data) {
+    public AboutTeamAdapter(Context mContext, ArrayList<UserItem> data) {
         this.mContext = mContext;
         this.data = data;
     }

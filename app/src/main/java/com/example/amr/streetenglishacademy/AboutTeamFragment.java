@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class AboutTeamFragment extends Fragment {
 
     View view;
-    MyListAdaper adaper;
+    AboutTeamAdapter adaper;
     ArrayList<UserItem> data;
     UserItem userItem;
     ListView lv;
@@ -65,7 +65,7 @@ public class AboutTeamFragment extends Fragment {
         userItem.setUserPicture(R.mipmap.amr);
         data.add(userItem);
 
-        adaper = new MyListAdaper(getActivity(), data);
+        adaper = new AboutTeamAdapter(getActivity(), data);
         lv.setAdapter(adaper);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {

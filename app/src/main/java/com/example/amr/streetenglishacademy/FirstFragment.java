@@ -3,35 +3,61 @@ package com.example.amr.streetenglishacademy;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 
 public class FirstFragment extends Fragment {
 
     View view;
-    ListView listView;
-    ArrayList<Integer> arr;
+    RecyclerView recycler_view;
+    ArrayList<HomeItem> data;
+    HomeItem homeItem;
+    FirstLayoutAdapter adapter;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.first_layout, container, false);
 
-        listView = (ListView) view.findViewById(R.id.listView);
+        recycler_view = view.findViewById(R.id.recycler_view);
 
-        arr = new ArrayList<Integer>();
+        data = new ArrayList<HomeItem>();
 
-        arr.add(R.mipmap.el2ola);
-        arr.add(R.mipmap.eltania);
-        arr.add(R.mipmap.eltalta);
-        arr.add(R.mipmap.elrab3a);
+        homeItem = new HomeItem();
+        homeItem.setNameH("Kids");
+        homeItem.setShortDesc("Short Description");
+        homeItem.setImageH(R.mipmap.el2ola);
+        data.add(homeItem);
 
-        CustomFirstList cl = new CustomFirstList(getActivity(), arr);
-        listView.setAdapter(cl);
+        homeItem = new HomeItem();
+        homeItem.setNameH("Adults");
+        homeItem.setShortDesc("Short Description");
+        homeItem.setImageH(R.mipmap.eltania);
+        data.add(homeItem);
+
+        homeItem = new HomeItem();
+        homeItem.setNameH("Teachers");
+        homeItem.setShortDesc("Short Description");
+        homeItem.setImageH(R.mipmap.eltalta);
+        data.add(homeItem);
+
+        homeItem = new HomeItem();
+        homeItem.setNameH("Online");
+        homeItem.setShortDesc("Short Description");
+        homeItem.setImageH(R.mipmap.elrab3a);
+        data.add(homeItem);
+
+        adapter = new FirstLayoutAdapter(getActivity(), data);
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity(), 2);
+        recycler_view.setLayoutManager(mLayoutManager);
+        recycler_view.setItemAnimator(new DefaultItemAnimator());
+        recycler_view.setAdapter(adapter);
 
         return view;
     }
