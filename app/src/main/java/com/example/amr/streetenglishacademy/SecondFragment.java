@@ -30,20 +30,20 @@ public class SecondFragment extends Fragment {
 
         mCItemList = new ArrayList<>();
 
-        mCItemList.add(new ContentItem(8, "Phonetics", "Direct to Google Drive"));
-        mCItemList.add(new ContentItem(5, "Vocabulary", "Direct to Google Drive"));
-        mCItemList.add(new ContentItem(9, "Grammar", "Direct to Google Drive"));
-        mCItemList.add(new ContentItem(10, "Listening", "Direct to Google Drive"));
-        mCItemList.add(new ContentItem(11, "Reading", "Direct to Google Drive"));
-        mCItemList.add(new ContentItem(4, "Videos", "Direct to Google Drive"));
-        mCItemList.add(new ContentItem(1, "Conversations", "Direct to Google Drive"));
-        mCItemList.add(new ContentItem(2, "Idioms", "Direct to Google Drive"));
-        mCItemList.add(new ContentItem(3, "Phrasal Verbs", "Direct to Google Drive"));
-        mCItemList.add(new ContentItem(6, "Exercises", "Direct to Google Drive"));
-        mCItemList.add(new ContentItem(7, "Tests", "Direct to Google Drive"));
-        mCItemList.add(new ContentItem(12, "TOEFL", "Direct to Google Drive"));
-        mCItemList.add(new ContentItem(13, "IELTS", "Direct to Google Drive"));
-        mCItemList.add(new ContentItem(14, "Miscellaneous", "Direct to Google Drive"));
+        mCItemList.add(new ContentItem(8, "Phonetics", "Opening in Google Drive."));
+        mCItemList.add(new ContentItem(5, "Vocabulary", "Opening in Google Drive."));
+        mCItemList.add(new ContentItem(9, "Grammar", "Opening in Google Drive."));
+        mCItemList.add(new ContentItem(10, "Listening", "Opening in Google Drive."));
+        mCItemList.add(new ContentItem(11, "Reading", "Opening in Google Drive."));
+        mCItemList.add(new ContentItem(4, "Videos", "Opening in Google Drive."));
+        mCItemList.add(new ContentItem(1, "Conversations", "Opening in Google Drive."));
+        mCItemList.add(new ContentItem(2, "Idioms", "Opening in Google Drive."));
+        mCItemList.add(new ContentItem(3, "Phrasal Verbs", "Opening in Google Drive."));
+        mCItemList.add(new ContentItem(6, "Exercises", "Opening in Google Drive."));
+        mCItemList.add(new ContentItem(7, "Tests", "Opening in Google Drive."));
+        mCItemList.add(new ContentItem(12, "TOEFL", "Opening in Google Drive."));
+        mCItemList.add(new ContentItem(13, "IELTS", "Opening in Google Drive."));
+        mCItemList.add(new ContentItem(14, "Miscellaneous", "Opening in Google Drive."));
 
         //Init adapter
         adapter = new ContentAdapter(getActivity(), mCItemList);

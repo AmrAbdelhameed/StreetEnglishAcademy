@@ -28,7 +28,7 @@
         android:layout_marginTop="0dp"
         android:text="no_of_items"
         android:textColor="@color/colorSecondText"
-        android:textSize="@dimen/_18sp"
+        android:textSize="@dimen/_15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -92,16 +92,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
         FragmentManager fragmentManager = getFragmentManager();
         if (id == R.id.nav_first_layout) {
+            setTitle("Street English Academy");
             fragmentManager.beginTransaction().replace(R.id.content_frame, new FirstFragment()).commit();
         } else if (id == R.id.nav_second_layout) {
+            setTitle("Content");
             fragmentManager.beginTransaction().replace(R.id.content_frame, new SecondFragment()).commit();
         }
 //        else if (id == R.id.nav_test_layout) {
 //            fragmentManager.beginTransaction().replace(R.id.content_frame, new TestFragment()).commit();
 //        }
         else if (id == R.id.nav_third_layout) {
+            setTitle("About SEA");
             fragmentManager.beginTransaction().replace(R.id.content_frame, new ThirdFragment()).commit();
         } else if (id == R.id.nav_team_sea) {
+            setTitle("About Team SEA");
             fragmentManager.beginTransaction().replace(R.id.content_frame, new AboutTeamFragment()).commit();
         } else if (id == R.id.nav_share1) {
             String num = "01158748131";
@@ -131,8 +135,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_review) {
 //            Intent i = new Intent(MainActivity.this, Login.class);
 //            startActivity(i);
-            Toast.makeText(this, "Google Form Feedback", Toast.LENGTH_SHORT).show();
-//            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/drive/folders/0B4Db4KEZ1GtzNGN0ZHNUQjA1cDQ")));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/forms/d/1lGR3iIDlgBW3zzOpjp4oqB_vjmxXB-s7hH4_fVWa5sg/viewform?edit_requested=true")));
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

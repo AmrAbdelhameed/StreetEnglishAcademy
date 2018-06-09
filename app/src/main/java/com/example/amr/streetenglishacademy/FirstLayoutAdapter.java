@@ -1,6 +1,8 @@
 package com.example.amr.streetenglishacademy;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,10 +33,22 @@ public class FirstLayoutAdapter extends RecyclerView.Adapter<FirstLayoutAdapter.
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
 
-        HomeItem item = data.get(position);
+        final HomeItem item = data.get(position);
         holder.name.setText(item.getNameH());
-        holder.shortDesc.setText(item.getShortDesc());
         holder.image.setBackgroundResource(item.getImageH());
+
+        holder.btnMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(mContext, DetailsActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("name", item.getNameH());
+                bundle.putString("desc", item.getDesc());
+                bundle.putInt("image", item.getImageH());
+                i.putExtras(bundle);
+                mContext.startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -43,13 +57,12 @@ public class FirstLayoutAdapter extends RecyclerView.Adapter<FirstLayoutAdapter.
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView name, shortDesc;
+        public TextView name;
         public Button image, btnMore;
 
         public MyViewHolder(View view) {
             super(view);
             name = view.findViewById(R.id.name);
-            shortDesc = view.findViewById(R.id.shortDesc);
             image = view.findViewById(R.id.image);
             btnMore = view.findViewById(R.id.btnMore);
         }

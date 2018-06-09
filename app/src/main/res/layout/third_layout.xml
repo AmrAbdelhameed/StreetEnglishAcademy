@@ -17,7 +17,7 @@
             android:layout_marginLeft="@dimen/_8dp"
             android:layout_marginRight="@dimen/_8dp"
             android:layout_marginTop="@dimen/_8dp"
-            android:background="@mipmap/aboutus"
+            android:background="@drawable/about"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -39,36 +39,19 @@
 
         <TextView
             android:id="@+id/address_sea"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_8dp"
-            android:layout_marginRight="@dimen/_8dp"
-            android:layout_marginTop="@dimen/_8dp"
-            android:gravity="center"
-            android:text="Address"
-            android:textColor="@color/colorSecondText"
-            android:textSize="@dimen/_20sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvname" />
-
-        <TextView
-            android:id="@+id/description_sea"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_8dp"
-            android:layout_marginLeft="@dimen/_8dp"
-            android:layout_marginRight="@dimen/_8dp"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
             android:layout_marginTop="@dimen/_8dp"
-            android:gravity="center"
-            android:text="Description"
+            android:text="@string/about"
+            android:textSize="@dimen/_15sp"
             android:textColor="@color/colorSecondText"
-            android:textSize="@dimen/_20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/address_sea" />
-
+            app:layout_constraintTop_toBottomOf="@+id/tvname" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

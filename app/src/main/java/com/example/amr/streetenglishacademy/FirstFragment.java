@@ -30,27 +30,27 @@ public class FirstFragment extends Fragment {
         data = new ArrayList<HomeItem>();
 
         homeItem = new HomeItem();
-        homeItem.setNameH("Kids");
-        homeItem.setShortDesc("Short Description");
-        homeItem.setImageH(R.mipmap.el2ola);
+        homeItem.setNameH("Kids program");
+        homeItem.setDesc(getString(R.string.kids));
+        homeItem.setImageH(R.mipmap.kids);
         data.add(homeItem);
 
         homeItem = new HomeItem();
-        homeItem.setNameH("Adults");
-        homeItem.setShortDesc("Short Description");
-        homeItem.setImageH(R.mipmap.eltania);
+        homeItem.setNameH("Adults course");
+        homeItem.setDesc(getString(R.string.adults));
+        homeItem.setImageH(R.mipmap.adults);
         data.add(homeItem);
 
         homeItem = new HomeItem();
-        homeItem.setNameH("Teachers");
-        homeItem.setShortDesc("Short Description");
-        homeItem.setImageH(R.mipmap.eltalta);
+        homeItem.setNameH("Teachers workshop");
+        homeItem.setDesc(getString(R.string.teachers));
+        homeItem.setImageH(R.mipmap.teachers);
         data.add(homeItem);
 
         homeItem = new HomeItem();
-        homeItem.setNameH("Online");
-        homeItem.setShortDesc("Short Description");
-        homeItem.setImageH(R.mipmap.elrab3a);
+        homeItem.setNameH("Online training");
+        homeItem.setDesc(getString(R.string.online));
+        homeItem.setImageH(R.mipmap.online);
         data.add(homeItem);
 
         adapter = new FirstLayoutAdapter(getActivity(), data);

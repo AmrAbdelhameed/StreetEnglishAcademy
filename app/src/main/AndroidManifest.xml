@@ -24,38 +24,32 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
             android:label="Street English Academy"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".SettingsActivity"
             android:screenOrientation="portrait"
-            android:label="@string/title_activity_settings">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.amr.streetenglishacademy.MainActivity" />
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ImageUser"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyDialog" />
         <activity
             android:name=".Evaluation"
-            android:screenOrientation="portrait"
-            android:label="Your Feedback" />
+            android:label="Your Feedback"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Login"
-            android:screenOrientation="portrait"
-            android:label="Registration" />
+            android:label="Registration"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ShowAllReviews"
+            android:label="Show All Reviews"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DetailsReview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DetailsActivity"
             android:screenOrientation="portrait"
-            android:label="Show All Reviews">
-        </activity>
-        <activity android:name=".DetailsReview"
-            android:screenOrientation="portrait">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
